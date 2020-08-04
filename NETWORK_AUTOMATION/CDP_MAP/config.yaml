@@ -1,0 +1,10 @@
+---
+core:
+    num_workers: 100
+
+inventory:
+    plugin: nornir.plugins.inventory.simple.SimpleInventory
+    options:
+        host_file: "/home/aslanbdurahmanov/Documents/Network_Automation/cdp_map/hosts.yaml"
+        group_file: "/home/aslanbdurahmanov/Documents/Network_Automation/cdp_map/groups.yaml"
+        defaults_file: "/home/aslanbdurahmanov/Documents/Network_Automation/cdp_map/defaults.yaml"

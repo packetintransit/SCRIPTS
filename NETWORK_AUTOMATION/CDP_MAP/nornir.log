@@ -1,0 +1,56 @@
+2020-08-03 11:03:48,517 -  nornir.core -     INFO -        run() - Running task 'cdp_map' with args {} on 16 hosts
+2020-08-03 11:03:53,570 - nornir.core.task -    ERROR -      start() - Host 'ORC_ADMIN_RSHACK_01': task 'netmiko_send_command' failed with traceback:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/netmiko/base_connection.py", line 915, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "/usr/local/lib/python3.8/dist-packages/paramiko/client.py", line 349, in connect
+    retry_on_signal(lambda: sock.connect(addr))
+  File "/usr/local/lib/python3.8/dist-packages/paramiko/util.py", line 283, in retry_on_signal
+    return function()
+  File "/usr/local/lib/python3.8/dist-packages/paramiko/client.py", line 349, in <lambda>
+    retry_on_signal(lambda: sock.connect(addr))
+socket.timeout: timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "/usr/local/lib/python3.8/dist-packages/nornir/plugins/tasks/networking/netmiko_send_command.py", line 26, in netmiko_send_command
+    net_connect = task.host.get_connection("netmiko", task.nornir.config)
+  File "/usr/local/lib/python3.8/dist-packages/nornir/core/inventory.py", line 294, in get_connection
+    self.open_connection(
+  File "/usr/local/lib/python3.8/dist-packages/nornir/core/inventory.py", line 345, in open_connection
+    self.connections[connection].open(
+  File "/usr/local/lib/python3.8/dist-packages/nornir/plugins/connections/netmiko.py", line 58, in open
+    self.connection = ConnectHandler(**parameters)
+  File "/usr/local/lib/python3.8/dist-packages/netmiko/ssh_dispatcher.py", line 298, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "/usr/local/lib/python3.8/dist-packages/netmiko/base_connection.py", line 341, in __init__
+    self._open()
+  File "/usr/local/lib/python3.8/dist-packages/netmiko/base_connection.py", line 346, in _open
+    self.establish_connection()
+  File "/usr/local/lib/python3.8/dist-packages/netmiko/base_connection.py", line 937, in establish_connection
+    raise NetmikoTimeoutException(msg)
+netmiko.ssh_exception.NetmikoTimeoutException: TCP connection to device failed.
+
+Common causes of this problem are:
+1. Incorrect hostname or IP address.
+2. Wrong TCP port.
+3. Intermediate firewall blocking access.
+
+Device settings: cisco_ios 10.202.228.40:22
+
+
+
+2020-08-03 11:03:53,571 - nornir.core.task -    ERROR -      start() - Host 'ORC_ADMIN_RSHACK_01': task 'cdp_map' failed with traceback:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "cdpmap.py", line 14, in cdp_map
+    r = task.run(task=netmiko_send_command, command_string="show cdp neighbor", use_genie=True)
+  File "/usr/local/lib/python3.8/dist-packages/nornir/core/task.py", line 147, in run
+    raise NornirSubTaskError(task=task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: <function netmiko_send_command at 0x7fb18ae80310> (failed)
+
+
