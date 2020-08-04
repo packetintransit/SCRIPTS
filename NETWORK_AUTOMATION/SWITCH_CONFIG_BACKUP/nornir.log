@@ -1,0 +1,49 @@
+2020-07-30 16:00:50,914 -  nornir.core -     INFO -        run() - Running task 'Creating Backup Archive' with args {'name': 'Creating Backup Archive'} on 16 hosts
+2020-07-30 16:01:11,991 - nornir.core.task -    ERROR -      start() - Host 'ORC_ADMIN_RSHACK_01': task 'netmiko_send_command' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Program Files\Python38\lib\site-packages\netmiko\base_connection.py", line 899, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "C:\Program Files\Python38\lib\site-packages\paramiko\client.py", line 349, in connect
+    retry_on_signal(lambda: sock.connect(addr))
+  File "C:\Program Files\Python38\lib\site-packages\paramiko\util.py", line 283, in retry_on_signal
+    return function()
+  File "C:\Program Files\Python38\lib\site-packages\paramiko\client.py", line 349, in <lambda>
+    retry_on_signal(lambda: sock.connect(addr))
+TimeoutError: [WinError 10060] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "C:\Program Files\Python38\lib\site-packages\nornir\plugins\tasks\networking\netmiko_send_command.py", line 26, in netmiko_send_command
+    net_connect = task.host.get_connection("netmiko", task.nornir.config)
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\inventory.py", line 294, in get_connection
+    self.open_connection(
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\inventory.py", line 345, in open_connection
+    self.connections[connection].open(
+  File "C:\Program Files\Python38\lib\site-packages\nornir\plugins\connections\netmiko.py", line 58, in open
+    self.connection = ConnectHandler(**parameters)
+  File "C:\Program Files\Python38\lib\site-packages\netmiko\ssh_dispatcher.py", line 266, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "C:\Program Files\Python38\lib\site-packages\netmiko\base_connection.py", line 327, in __init__
+    self._open()
+  File "C:\Program Files\Python38\lib\site-packages\netmiko\base_connection.py", line 332, in _open
+    self.establish_connection()
+  File "C:\Program Files\Python38\lib\site-packages\netmiko\base_connection.py", line 905, in establish_connection
+    raise NetmikoTimeoutException(msg)
+netmiko.ssh_exception.NetmikoTimeoutException: Connection to device timed-out: cisco_ios 10.202.228.40:22
+
+2020-07-30 16:01:12,000 - nornir.core.task -    ERROR -      start() - Host 'ORC_ADMIN_RSHACK_01': task 'Creating Backup Archive' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "code.py", line 30, in backup_configurations
+    r = task.run(task=netmiko_send_command, command_string=cmd)
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\task.py", line 147, in run
+    raise NornirSubTaskError(task=task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: <function netmiko_send_command at 0x0000020094791B80> (failed)
+
+
+2020-08-03 08:23:05,753 -  nornir.core -     INFO -        run() - Running task 'Creating Backup Archive' with args {'name': 'Creating Backup Archive'} on 2 hosts
+2020-08-03 08:24:05,152 -  nornir.core -     INFO -        run() - Running task 'Creating Backup Archive' with args {'name': 'Creating Backup Archive'} on 2 hosts
