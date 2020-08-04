@@ -1,0 +1,2419 @@
+2020-08-03 14:22:45,569 -  nornir.core -     INFO -        run() - Running task 'dev_info' with args {} on 16 hosts
+2020-08-03 14:22:46,161 - nornir.core.task -    ERROR -      start() - Host 'ORC_Admin_SR_02': task 'netmiko_send_command' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "C:\Program Files\Python38\lib\site-packages\nornir\plugins\tasks\networking\netmiko_send_command.py", line 26, in netmiko_send_command
+    net_connect = task.host.get_connection("netmiko", task.nornir.config)
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\inventory.py", line 294, in get_connection
+    self.open_connection(
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\inventory.py", line 345, in open_connection
+    self.connections[connection].open(
+  File "C:\Program Files\Python38\lib\site-packages\nornir\plugins\connections\netmiko.py", line 58, in open
+    self.connection = ConnectHandler(**parameters)
+  File "C:\Program Files\Python38\lib\site-packages\netmiko\ssh_dispatcher.py", line 266, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "C:\Program Files\Python38\lib\site-packages\netmiko\base_connection.py", line 327, in __init__
+    self._open()
+  File "C:\Program Files\Python38\lib\site-packages\netmiko\base_connection.py", line 332, in _open
+    self.establish_connection()
+  File "C:\Program Files\Python38\lib\site-packages\netmiko\base_connection.py", line 899, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "C:\Program Files\Python38\lib\site-packages\paramiko\client.py", line 435, in connect
+    self._auth(
+  File "C:\Program Files\Python38\lib\site-packages\paramiko\client.py", line 765, in _auth
+    raise SSHException("No authentication methods available")
+paramiko.ssh_exception.SSHException: No authentication methods available
+
+2020-08-03 14:22:46,169 - nornir.core.task -    ERROR -      start() - Host 'ORC_Admin_SR_02': task 'dev_info' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "inventory.py", line 15, in dev_info
+    r = task.run(netmiko_send_command, command_string="show version", use_genie=True)
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\task.py", line 147, in run
+    raise NornirSubTaskError(task=task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: <function netmiko_send_command at 0x000001548A678AF0> (failed)
+
+
+2020-08-03 14:22:46,217 - nornir.core.task -    ERROR -      start() - Host 'ORC_ADMIN_BASESWITCH_02': task 'netmiko_send_command' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "C:\Program Files\Python38\lib\site-packages\nornir\plugins\tasks\networking\netmiko_send_command.py", line 26, in netmiko_send_command
+    net_connect = task.host.get_connection("netmiko", task.nornir.config)
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\inventory.py", line 294, in get_connection
+    self.open_connection(
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\inventory.py", line 345, in open_connection
+    self.connections[connection].open(
+  File "C:\Program Files\Python38\lib\site-packages\nornir\plugins\connections\netmiko.py", line 58, in open
+    self.connection = ConnectHandler(**parameters)
+  File "C:\Program Files\Python38\lib\site-packages\netmiko\ssh_dispatcher.py", line 266, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "C:\Program Files\Python38\lib\site-packages\netmiko\base_connection.py", line 327, in __init__
+    self._open()
+  File "C:\Program Files\Python38\lib\site-packages\netmiko\base_connection.py", line 332, in _open
+    self.establish_connection()
+  File "C:\Program Files\Python38\lib\site-packages\netmiko\base_connection.py", line 899, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "C:\Program Files\Python38\lib\site-packages\paramiko\client.py", line 435, in connect
+    self._auth(
+  File "C:\Program Files\Python38\lib\site-packages\paramiko\client.py", line 765, in _auth
+    raise SSHException("No authentication methods available")
+paramiko.ssh_exception.SSHException: No authentication methods available
+
+2020-08-03 14:22:46,217 - nornir.core.task -    ERROR -      start() - Host 'ORC_ADMIN_BASESWITCH_02': task 'dev_info' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "inventory.py", line 15, in dev_info
+    r = task.run(netmiko_send_command, command_string="show version", use_genie=True)
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\task.py", line 147, in run
+    raise NornirSubTaskError(task=task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: <function netmiko_send_command at 0x000001548A678AF0> (failed)
+
+
+2020-08-03 14:22:46,360 - nornir.core.task -    ERROR -      start() - Host 'ORC_ADMIN_BASESWITCH': task 'netmiko_send_command' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "C:\Program Files\Python38\lib\site-packages\nornir\plugins\tasks\networking\netmiko_send_command.py", line 26, in netmiko_send_command
+    net_connect = task.host.get_connection("netmiko", task.nornir.config)
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\inventory.py", line 294, in get_connection
+    self.open_connection(
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\inventory.py", line 345, in open_connection
+    self.connections[connection].open(
+  File "C:\Program Files\Python38\lib\site-packages\nornir\plugins\connections\netmiko.py", line 58, in open
+    self.connection = ConnectHandler(**parameters)
+  File "C:\Program Files\Python38\lib\site-packages\netmiko\ssh_dispatcher.py", line 266, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "C:\Program Files\Python38\lib\site-packages\netmiko\base_connection.py", line 327, in __init__
+    self._open()
+  File "C:\Program Files\Python38\lib\site-packages\netmiko\base_connection.py", line 332, in _open
+    self.establish_connection()
+  File "C:\Program Files\Python38\lib\site-packages\netmiko\base_connection.py", line 899, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "C:\Program Files\Python38\lib\site-packages\paramiko\client.py", line 435, in connect
+    self._auth(
+  File "C:\Program Files\Python38\lib\site-packages\paramiko\client.py", line 765, in _auth
+    raise SSHException("No authentication methods available")
+paramiko.ssh_exception.SSHException: No authentication methods available
+
+2020-08-03 14:22:46,360 - nornir.core.task -    ERROR -      start() - Host 'ORC_ADMIN_BBH_01': task 'netmiko_send_command' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "C:\Program Files\Python38\lib\site-packages\nornir\plugins\tasks\networking\netmiko_send_command.py", line 26, in netmiko_send_command
+    net_connect = task.host.get_connection("netmiko", task.nornir.config)
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\inventory.py", line 294, in get_connection
+    self.open_connection(
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\inventory.py", line 345, in open_connection
+    self.connections[connection].open(
+  File "C:\Program Files\Python38\lib\site-packages\nornir\plugins\connections\netmiko.py", line 58, in open
+    self.connection = ConnectHandler(**parameters)
+  File "C:\Program Files\Python38\lib\site-packages\netmiko\ssh_dispatcher.py", line 266, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "C:\Program Files\Python38\lib\site-packages\netmiko\base_connection.py", line 327, in __init__
+    self._open()
+  File "C:\Program Files\Python38\lib\site-packages\netmiko\base_connection.py", line 332, in _open
+    self.establish_connection()
+  File "C:\Program Files\Python38\lib\site-packages\netmiko\base_connection.py", line 899, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "C:\Program Files\Python38\lib\site-packages\paramiko\client.py", line 435, in connect
+    self._auth(
+  File "C:\Program Files\Python38\lib\site-packages\paramiko\client.py", line 765, in _auth
+    raise SSHException("No authentication methods available")
+paramiko.ssh_exception.SSHException: No authentication methods available
+
+2020-08-03 14:22:46,361 - nornir.core.task -    ERROR -      start() - Host 'ORC_ADMIN_BASESWITCH': task 'dev_info' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "inventory.py", line 15, in dev_info
+    r = task.run(netmiko_send_command, command_string="show version", use_genie=True)
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\task.py", line 147, in run
+    raise NornirSubTaskError(task=task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: <function netmiko_send_command at 0x000001548A678AF0> (failed)
+
+
+2020-08-03 14:22:46,400 - nornir.core.task -    ERROR -      start() - Host 'ORC_ADMIN_BBH_01': task 'dev_info' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "inventory.py", line 15, in dev_info
+    r = task.run(netmiko_send_command, command_string="show version", use_genie=True)
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\task.py", line 147, in run
+    raise NornirSubTaskError(task=task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: <function netmiko_send_command at 0x000001548A678AF0> (failed)
+
+
+2020-08-03 14:22:46,462 - nornir.core.task -    ERROR -      start() - Host 'ORC_Admin_SR_01': task 'netmiko_send_command' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "C:\Program Files\Python38\lib\site-packages\nornir\plugins\tasks\networking\netmiko_send_command.py", line 26, in netmiko_send_command
+    net_connect = task.host.get_connection("netmiko", task.nornir.config)
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\inventory.py", line 294, in get_connection
+    self.open_connection(
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\inventory.py", line 345, in open_connection
+    self.connections[connection].open(
+  File "C:\Program Files\Python38\lib\site-packages\nornir\plugins\connections\netmiko.py", line 58, in open
+    self.connection = ConnectHandler(**parameters)
+  File "C:\Program Files\Python38\lib\site-packages\netmiko\ssh_dispatcher.py", line 266, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "C:\Program Files\Python38\lib\site-packages\netmiko\base_connection.py", line 327, in __init__
+    self._open()
+  File "C:\Program Files\Python38\lib\site-packages\netmiko\base_connection.py", line 332, in _open
+    self.establish_connection()
+  File "C:\Program Files\Python38\lib\site-packages\netmiko\base_connection.py", line 899, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "C:\Program Files\Python38\lib\site-packages\paramiko\client.py", line 435, in connect
+    self._auth(
+  File "C:\Program Files\Python38\lib\site-packages\paramiko\client.py", line 765, in _auth
+    raise SSHException("No authentication methods available")
+paramiko.ssh_exception.SSHException: No authentication methods available
+
+2020-08-03 14:22:46,462 - nornir.core.task -    ERROR -      start() - Host 'ORC_Admin_SR_01': task 'dev_info' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "inventory.py", line 15, in dev_info
+    r = task.run(netmiko_send_command, command_string="show version", use_genie=True)
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\task.py", line 147, in run
+    raise NornirSubTaskError(task=task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: <function netmiko_send_command at 0x000001548A678AF0> (failed)
+
+
+2020-08-03 14:22:46,463 - nornir.core.task -    ERROR -      start() - Host 'ORC_Admin_Wine_Room': task 'netmiko_send_command' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "C:\Program Files\Python38\lib\site-packages\nornir\plugins\tasks\networking\netmiko_send_command.py", line 26, in netmiko_send_command
+    net_connect = task.host.get_connection("netmiko", task.nornir.config)
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\inventory.py", line 294, in get_connection
+    self.open_connection(
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\inventory.py", line 345, in open_connection
+    self.connections[connection].open(
+  File "C:\Program Files\Python38\lib\site-packages\nornir\plugins\connections\netmiko.py", line 58, in open
+    self.connection = ConnectHandler(**parameters)
+  File "C:\Program Files\Python38\lib\site-packages\netmiko\ssh_dispatcher.py", line 266, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "C:\Program Files\Python38\lib\site-packages\netmiko\base_connection.py", line 327, in __init__
+    self._open()
+  File "C:\Program Files\Python38\lib\site-packages\netmiko\base_connection.py", line 332, in _open
+    self.establish_connection()
+  File "C:\Program Files\Python38\lib\site-packages\netmiko\base_connection.py", line 899, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "C:\Program Files\Python38\lib\site-packages\paramiko\client.py", line 435, in connect
+    self._auth(
+  File "C:\Program Files\Python38\lib\site-packages\paramiko\client.py", line 765, in _auth
+    raise SSHException("No authentication methods available")
+paramiko.ssh_exception.SSHException: No authentication methods available
+
+2020-08-03 14:22:46,463 - nornir.core.task -    ERROR -      start() - Host 'ORC_Admin_SR_04': task 'netmiko_send_command' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "C:\Program Files\Python38\lib\site-packages\nornir\plugins\tasks\networking\netmiko_send_command.py", line 26, in netmiko_send_command
+    net_connect = task.host.get_connection("netmiko", task.nornir.config)
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\inventory.py", line 294, in get_connection
+    self.open_connection(
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\inventory.py", line 345, in open_connection
+    self.connections[connection].open(
+  File "C:\Program Files\Python38\lib\site-packages\nornir\plugins\connections\netmiko.py", line 58, in open
+    self.connection = ConnectHandler(**parameters)
+  File "C:\Program Files\Python38\lib\site-packages\netmiko\ssh_dispatcher.py", line 266, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "C:\Program Files\Python38\lib\site-packages\netmiko\base_connection.py", line 327, in __init__
+    self._open()
+  File "C:\Program Files\Python38\lib\site-packages\netmiko\base_connection.py", line 332, in _open
+    self.establish_connection()
+  File "C:\Program Files\Python38\lib\site-packages\netmiko\base_connection.py", line 899, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "C:\Program Files\Python38\lib\site-packages\paramiko\client.py", line 435, in connect
+    self._auth(
+  File "C:\Program Files\Python38\lib\site-packages\paramiko\client.py", line 765, in _auth
+    raise SSHException("No authentication methods available")
+paramiko.ssh_exception.SSHException: No authentication methods available
+
+2020-08-03 14:22:46,463 - nornir.core.task -    ERROR -      start() - Host 'ORC_Admin_Wine_Room': task 'dev_info' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "inventory.py", line 15, in dev_info
+    r = task.run(netmiko_send_command, command_string="show version", use_genie=True)
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\task.py", line 147, in run
+    raise NornirSubTaskError(task=task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: <function netmiko_send_command at 0x000001548A678AF0> (failed)
+
+
+2020-08-03 14:22:46,463 - nornir.core.task -    ERROR -      start() - Host 'ORC_Admin_SR_04': task 'dev_info' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "inventory.py", line 15, in dev_info
+    r = task.run(netmiko_send_command, command_string="show version", use_genie=True)
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\task.py", line 147, in run
+    raise NornirSubTaskError(task=task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: <function netmiko_send_command at 0x000001548A678AF0> (failed)
+
+
+2020-08-03 14:22:46,586 - nornir.core.task -    ERROR -      start() - Host 'ORC_Admin_SR_05': task 'netmiko_send_command' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "C:\Program Files\Python38\lib\site-packages\nornir\plugins\tasks\networking\netmiko_send_command.py", line 26, in netmiko_send_command
+    net_connect = task.host.get_connection("netmiko", task.nornir.config)
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\inventory.py", line 294, in get_connection
+    self.open_connection(
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\inventory.py", line 345, in open_connection
+    self.connections[connection].open(
+  File "C:\Program Files\Python38\lib\site-packages\nornir\plugins\connections\netmiko.py", line 58, in open
+    self.connection = ConnectHandler(**parameters)
+  File "C:\Program Files\Python38\lib\site-packages\netmiko\ssh_dispatcher.py", line 266, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "C:\Program Files\Python38\lib\site-packages\netmiko\base_connection.py", line 327, in __init__
+    self._open()
+  File "C:\Program Files\Python38\lib\site-packages\netmiko\base_connection.py", line 332, in _open
+    self.establish_connection()
+  File "C:\Program Files\Python38\lib\site-packages\netmiko\base_connection.py", line 899, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "C:\Program Files\Python38\lib\site-packages\paramiko\client.py", line 435, in connect
+    self._auth(
+  File "C:\Program Files\Python38\lib\site-packages\paramiko\client.py", line 765, in _auth
+    raise SSHException("No authentication methods available")
+paramiko.ssh_exception.SSHException: No authentication methods available
+
+2020-08-03 14:22:46,587 - nornir.core.task -    ERROR -      start() - Host 'ORC_Admin_SR_05': task 'dev_info' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "inventory.py", line 15, in dev_info
+    r = task.run(netmiko_send_command, command_string="show version", use_genie=True)
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\task.py", line 147, in run
+    raise NornirSubTaskError(task=task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: <function netmiko_send_command at 0x000001548A678AF0> (failed)
+
+
+2020-08-03 14:22:46,940 - nornir.core.task -    ERROR -      start() - Host 'ORC_Admin_SR_03': task 'netmiko_send_command' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "C:\Program Files\Python38\lib\site-packages\nornir\plugins\tasks\networking\netmiko_send_command.py", line 26, in netmiko_send_command
+    net_connect = task.host.get_connection("netmiko", task.nornir.config)
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\inventory.py", line 294, in get_connection
+    self.open_connection(
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\inventory.py", line 345, in open_connection
+    self.connections[connection].open(
+  File "C:\Program Files\Python38\lib\site-packages\nornir\plugins\connections\netmiko.py", line 58, in open
+    self.connection = ConnectHandler(**parameters)
+  File "C:\Program Files\Python38\lib\site-packages\netmiko\ssh_dispatcher.py", line 266, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "C:\Program Files\Python38\lib\site-packages\netmiko\base_connection.py", line 327, in __init__
+    self._open()
+  File "C:\Program Files\Python38\lib\site-packages\netmiko\base_connection.py", line 332, in _open
+    self.establish_connection()
+  File "C:\Program Files\Python38\lib\site-packages\netmiko\base_connection.py", line 899, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "C:\Program Files\Python38\lib\site-packages\paramiko\client.py", line 435, in connect
+    self._auth(
+  File "C:\Program Files\Python38\lib\site-packages\paramiko\client.py", line 765, in _auth
+    raise SSHException("No authentication methods available")
+paramiko.ssh_exception.SSHException: No authentication methods available
+
+2020-08-03 14:22:46,941 - nornir.core.task -    ERROR -      start() - Host 'ORC_Admin_SR_03': task 'dev_info' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "inventory.py", line 15, in dev_info
+    r = task.run(netmiko_send_command, command_string="show version", use_genie=True)
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\task.py", line 147, in run
+    raise NornirSubTaskError(task=task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: <function netmiko_send_command at 0x000001548A678AF0> (failed)
+
+
+2020-08-03 14:22:47,165 - nornir.core.task -    ERROR -      start() - Host 'ORC_Admin_IT_Office_01': task 'netmiko_send_command' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "C:\Program Files\Python38\lib\site-packages\nornir\plugins\tasks\networking\netmiko_send_command.py", line 26, in netmiko_send_command
+    net_connect = task.host.get_connection("netmiko", task.nornir.config)
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\inventory.py", line 294, in get_connection
+    self.open_connection(
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\inventory.py", line 345, in open_connection
+    self.connections[connection].open(
+  File "C:\Program Files\Python38\lib\site-packages\nornir\plugins\connections\netmiko.py", line 58, in open
+    self.connection = ConnectHandler(**parameters)
+  File "C:\Program Files\Python38\lib\site-packages\netmiko\ssh_dispatcher.py", line 266, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "C:\Program Files\Python38\lib\site-packages\netmiko\base_connection.py", line 327, in __init__
+    self._open()
+  File "C:\Program Files\Python38\lib\site-packages\netmiko\base_connection.py", line 332, in _open
+    self.establish_connection()
+  File "C:\Program Files\Python38\lib\site-packages\netmiko\base_connection.py", line 899, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "C:\Program Files\Python38\lib\site-packages\paramiko\client.py", line 435, in connect
+    self._auth(
+  File "C:\Program Files\Python38\lib\site-packages\paramiko\client.py", line 765, in _auth
+    raise SSHException("No authentication methods available")
+paramiko.ssh_exception.SSHException: No authentication methods available
+
+2020-08-03 14:22:47,165 - nornir.core.task -    ERROR -      start() - Host 'ORC_Admin_Finance_01': task 'netmiko_send_command' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "C:\Program Files\Python38\lib\site-packages\nornir\plugins\tasks\networking\netmiko_send_command.py", line 26, in netmiko_send_command
+    net_connect = task.host.get_connection("netmiko", task.nornir.config)
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\inventory.py", line 294, in get_connection
+    self.open_connection(
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\inventory.py", line 345, in open_connection
+    self.connections[connection].open(
+  File "C:\Program Files\Python38\lib\site-packages\nornir\plugins\connections\netmiko.py", line 58, in open
+    self.connection = ConnectHandler(**parameters)
+  File "C:\Program Files\Python38\lib\site-packages\netmiko\ssh_dispatcher.py", line 266, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "C:\Program Files\Python38\lib\site-packages\netmiko\base_connection.py", line 327, in __init__
+    self._open()
+  File "C:\Program Files\Python38\lib\site-packages\netmiko\base_connection.py", line 332, in _open
+    self.establish_connection()
+  File "C:\Program Files\Python38\lib\site-packages\netmiko\base_connection.py", line 899, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "C:\Program Files\Python38\lib\site-packages\paramiko\client.py", line 435, in connect
+    self._auth(
+  File "C:\Program Files\Python38\lib\site-packages\paramiko\client.py", line 765, in _auth
+    raise SSHException("No authentication methods available")
+paramiko.ssh_exception.SSHException: No authentication methods available
+
+2020-08-03 14:22:47,165 - nornir.core.task -    ERROR -      start() - Host 'ORC_Admin_Finance_02': task 'netmiko_send_command' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "C:\Program Files\Python38\lib\site-packages\nornir\plugins\tasks\networking\netmiko_send_command.py", line 26, in netmiko_send_command
+    net_connect = task.host.get_connection("netmiko", task.nornir.config)
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\inventory.py", line 294, in get_connection
+    self.open_connection(
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\inventory.py", line 345, in open_connection
+    self.connections[connection].open(
+  File "C:\Program Files\Python38\lib\site-packages\nornir\plugins\connections\netmiko.py", line 58, in open
+    self.connection = ConnectHandler(**parameters)
+  File "C:\Program Files\Python38\lib\site-packages\netmiko\ssh_dispatcher.py", line 266, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "C:\Program Files\Python38\lib\site-packages\netmiko\base_connection.py", line 327, in __init__
+    self._open()
+  File "C:\Program Files\Python38\lib\site-packages\netmiko\base_connection.py", line 332, in _open
+    self.establish_connection()
+  File "C:\Program Files\Python38\lib\site-packages\netmiko\base_connection.py", line 899, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "C:\Program Files\Python38\lib\site-packages\paramiko\client.py", line 435, in connect
+    self._auth(
+  File "C:\Program Files\Python38\lib\site-packages\paramiko\client.py", line 765, in _auth
+    raise SSHException("No authentication methods available")
+paramiko.ssh_exception.SSHException: No authentication methods available
+
+2020-08-03 14:22:47,166 - nornir.core.task -    ERROR -      start() - Host 'ORC_Admin_Finance_03': task 'netmiko_send_command' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "C:\Program Files\Python38\lib\site-packages\nornir\plugins\tasks\networking\netmiko_send_command.py", line 26, in netmiko_send_command
+    net_connect = task.host.get_connection("netmiko", task.nornir.config)
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\inventory.py", line 294, in get_connection
+    self.open_connection(
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\inventory.py", line 345, in open_connection
+    self.connections[connection].open(
+  File "C:\Program Files\Python38\lib\site-packages\nornir\plugins\connections\netmiko.py", line 58, in open
+    self.connection = ConnectHandler(**parameters)
+  File "C:\Program Files\Python38\lib\site-packages\netmiko\ssh_dispatcher.py", line 266, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "C:\Program Files\Python38\lib\site-packages\netmiko\base_connection.py", line 327, in __init__
+    self._open()
+  File "C:\Program Files\Python38\lib\site-packages\netmiko\base_connection.py", line 332, in _open
+    self.establish_connection()
+  File "C:\Program Files\Python38\lib\site-packages\netmiko\base_connection.py", line 899, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "C:\Program Files\Python38\lib\site-packages\paramiko\client.py", line 435, in connect
+    self._auth(
+  File "C:\Program Files\Python38\lib\site-packages\paramiko\client.py", line 765, in _auth
+    raise SSHException("No authentication methods available")
+paramiko.ssh_exception.SSHException: No authentication methods available
+
+2020-08-03 14:22:47,167 - nornir.core.task -    ERROR -      start() - Host 'ORC_Admin_IT_Office_01': task 'dev_info' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "inventory.py", line 15, in dev_info
+    r = task.run(netmiko_send_command, command_string="show version", use_genie=True)
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\task.py", line 147, in run
+    raise NornirSubTaskError(task=task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: <function netmiko_send_command at 0x000001548A678AF0> (failed)
+
+
+2020-08-03 14:22:47,167 - nornir.core.task -    ERROR -      start() - Host 'ORC_Admin_SR_06': task 'netmiko_send_command' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "C:\Program Files\Python38\lib\site-packages\nornir\plugins\tasks\networking\netmiko_send_command.py", line 26, in netmiko_send_command
+    net_connect = task.host.get_connection("netmiko", task.nornir.config)
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\inventory.py", line 294, in get_connection
+    self.open_connection(
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\inventory.py", line 345, in open_connection
+    self.connections[connection].open(
+  File "C:\Program Files\Python38\lib\site-packages\nornir\plugins\connections\netmiko.py", line 58, in open
+    self.connection = ConnectHandler(**parameters)
+  File "C:\Program Files\Python38\lib\site-packages\netmiko\ssh_dispatcher.py", line 266, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "C:\Program Files\Python38\lib\site-packages\netmiko\base_connection.py", line 327, in __init__
+    self._open()
+  File "C:\Program Files\Python38\lib\site-packages\netmiko\base_connection.py", line 332, in _open
+    self.establish_connection()
+  File "C:\Program Files\Python38\lib\site-packages\netmiko\base_connection.py", line 899, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "C:\Program Files\Python38\lib\site-packages\paramiko\client.py", line 435, in connect
+    self._auth(
+  File "C:\Program Files\Python38\lib\site-packages\paramiko\client.py", line 765, in _auth
+    raise SSHException("No authentication methods available")
+paramiko.ssh_exception.SSHException: No authentication methods available
+
+2020-08-03 14:22:47,167 - nornir.core.task -    ERROR -      start() - Host 'ORC_Admin_Finance_01': task 'dev_info' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "inventory.py", line 15, in dev_info
+    r = task.run(netmiko_send_command, command_string="show version", use_genie=True)
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\task.py", line 147, in run
+    raise NornirSubTaskError(task=task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: <function netmiko_send_command at 0x000001548A678AF0> (failed)
+
+
+2020-08-03 14:22:47,168 - nornir.core.task -    ERROR -      start() - Host 'ORC_Admin_Finance_02': task 'dev_info' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "inventory.py", line 15, in dev_info
+    r = task.run(netmiko_send_command, command_string="show version", use_genie=True)
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\task.py", line 147, in run
+    raise NornirSubTaskError(task=task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: <function netmiko_send_command at 0x000001548A678AF0> (failed)
+
+
+2020-08-03 14:22:47,168 - nornir.core.task -    ERROR -      start() - Host 'ORC_Admin_Fairmont_Gold': task 'netmiko_send_command' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "C:\Program Files\Python38\lib\site-packages\nornir\plugins\tasks\networking\netmiko_send_command.py", line 26, in netmiko_send_command
+    net_connect = task.host.get_connection("netmiko", task.nornir.config)
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\inventory.py", line 294, in get_connection
+    self.open_connection(
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\inventory.py", line 345, in open_connection
+    self.connections[connection].open(
+  File "C:\Program Files\Python38\lib\site-packages\nornir\plugins\connections\netmiko.py", line 58, in open
+    self.connection = ConnectHandler(**parameters)
+  File "C:\Program Files\Python38\lib\site-packages\netmiko\ssh_dispatcher.py", line 266, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "C:\Program Files\Python38\lib\site-packages\netmiko\base_connection.py", line 327, in __init__
+    self._open()
+  File "C:\Program Files\Python38\lib\site-packages\netmiko\base_connection.py", line 332, in _open
+    self.establish_connection()
+  File "C:\Program Files\Python38\lib\site-packages\netmiko\base_connection.py", line 899, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "C:\Program Files\Python38\lib\site-packages\paramiko\client.py", line 435, in connect
+    self._auth(
+  File "C:\Program Files\Python38\lib\site-packages\paramiko\client.py", line 765, in _auth
+    raise SSHException("No authentication methods available")
+paramiko.ssh_exception.SSHException: No authentication methods available
+
+2020-08-03 14:22:47,168 - nornir.core.task -    ERROR -      start() - Host 'ORC_Admin_Finance_03': task 'dev_info' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "inventory.py", line 15, in dev_info
+    r = task.run(netmiko_send_command, command_string="show version", use_genie=True)
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\task.py", line 147, in run
+    raise NornirSubTaskError(task=task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: <function netmiko_send_command at 0x000001548A678AF0> (failed)
+
+
+2020-08-03 14:22:47,169 - nornir.core.task -    ERROR -      start() - Host 'ORC_Admin_SR_06': task 'dev_info' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "inventory.py", line 15, in dev_info
+    r = task.run(netmiko_send_command, command_string="show version", use_genie=True)
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\task.py", line 147, in run
+    raise NornirSubTaskError(task=task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: <function netmiko_send_command at 0x000001548A678AF0> (failed)
+
+
+2020-08-03 14:22:47,169 - nornir.core.task -    ERROR -      start() - Host 'ORC_Admin_Fairmont_Gold': task 'dev_info' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "inventory.py", line 15, in dev_info
+    r = task.run(netmiko_send_command, command_string="show version", use_genie=True)
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\task.py", line 147, in run
+    raise NornirSubTaskError(task=task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: <function netmiko_send_command at 0x000001548A678AF0> (failed)
+
+
+2020-08-03 14:23:06,633 - nornir.core.task -    ERROR -      start() - Host 'ORC_ADMIN_RSHACK_01': task 'netmiko_send_command' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Program Files\Python38\lib\site-packages\netmiko\base_connection.py", line 899, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "C:\Program Files\Python38\lib\site-packages\paramiko\client.py", line 349, in connect
+    retry_on_signal(lambda: sock.connect(addr))
+  File "C:\Program Files\Python38\lib\site-packages\paramiko\util.py", line 283, in retry_on_signal
+    return function()
+  File "C:\Program Files\Python38\lib\site-packages\paramiko\client.py", line 349, in <lambda>
+    retry_on_signal(lambda: sock.connect(addr))
+TimeoutError: [WinError 10060] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "C:\Program Files\Python38\lib\site-packages\nornir\plugins\tasks\networking\netmiko_send_command.py", line 26, in netmiko_send_command
+    net_connect = task.host.get_connection("netmiko", task.nornir.config)
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\inventory.py", line 294, in get_connection
+    self.open_connection(
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\inventory.py", line 345, in open_connection
+    self.connections[connection].open(
+  File "C:\Program Files\Python38\lib\site-packages\nornir\plugins\connections\netmiko.py", line 58, in open
+    self.connection = ConnectHandler(**parameters)
+  File "C:\Program Files\Python38\lib\site-packages\netmiko\ssh_dispatcher.py", line 266, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "C:\Program Files\Python38\lib\site-packages\netmiko\base_connection.py", line 327, in __init__
+    self._open()
+  File "C:\Program Files\Python38\lib\site-packages\netmiko\base_connection.py", line 332, in _open
+    self.establish_connection()
+  File "C:\Program Files\Python38\lib\site-packages\netmiko\base_connection.py", line 905, in establish_connection
+    raise NetmikoTimeoutException(msg)
+netmiko.ssh_exception.NetmikoTimeoutException: Connection to device timed-out: cisco_ios 10.202.228.40:22
+
+2020-08-03 14:23:06,634 - nornir.core.task -    ERROR -      start() - Host 'ORC_ADMIN_RSHACK_01': task 'dev_info' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "inventory.py", line 15, in dev_info
+    r = task.run(netmiko_send_command, command_string="show version", use_genie=True)
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\task.py", line 147, in run
+    raise NornirSubTaskError(task=task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: <function netmiko_send_command at 0x000001548A678AF0> (failed)
+
+
+2020-08-03 14:35:41,387 -  nornir.core -     INFO -        run() - Running task 'dev_info' with args {} on 16 hosts
+2020-08-03 14:35:42,212 - nornir.core.task -    ERROR -      start() - Host 'ORC_ADMIN_BASESWITCH_02': task 'netmiko_send_command' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "C:\Program Files\Python38\lib\site-packages\nornir\plugins\tasks\networking\netmiko_send_command.py", line 26, in netmiko_send_command
+    net_connect = task.host.get_connection("netmiko", task.nornir.config)
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\inventory.py", line 294, in get_connection
+    self.open_connection(
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\inventory.py", line 345, in open_connection
+    self.connections[connection].open(
+  File "C:\Program Files\Python38\lib\site-packages\nornir\plugins\connections\netmiko.py", line 58, in open
+    self.connection = ConnectHandler(**parameters)
+  File "C:\Program Files\Python38\lib\site-packages\netmiko\ssh_dispatcher.py", line 266, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "C:\Program Files\Python38\lib\site-packages\netmiko\base_connection.py", line 327, in __init__
+    self._open()
+  File "C:\Program Files\Python38\lib\site-packages\netmiko\base_connection.py", line 332, in _open
+    self.establish_connection()
+  File "C:\Program Files\Python38\lib\site-packages\netmiko\base_connection.py", line 899, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "C:\Program Files\Python38\lib\site-packages\paramiko\client.py", line 435, in connect
+    self._auth(
+  File "C:\Program Files\Python38\lib\site-packages\paramiko\client.py", line 765, in _auth
+    raise SSHException("No authentication methods available")
+paramiko.ssh_exception.SSHException: No authentication methods available
+
+2020-08-03 14:35:42,213 - nornir.core.task -    ERROR -      start() - Host 'ORC_Admin_SR_04': task 'netmiko_send_command' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "C:\Program Files\Python38\lib\site-packages\nornir\plugins\tasks\networking\netmiko_send_command.py", line 26, in netmiko_send_command
+    net_connect = task.host.get_connection("netmiko", task.nornir.config)
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\inventory.py", line 294, in get_connection
+    self.open_connection(
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\inventory.py", line 345, in open_connection
+    self.connections[connection].open(
+  File "C:\Program Files\Python38\lib\site-packages\nornir\plugins\connections\netmiko.py", line 58, in open
+    self.connection = ConnectHandler(**parameters)
+  File "C:\Program Files\Python38\lib\site-packages\netmiko\ssh_dispatcher.py", line 266, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "C:\Program Files\Python38\lib\site-packages\netmiko\base_connection.py", line 327, in __init__
+    self._open()
+  File "C:\Program Files\Python38\lib\site-packages\netmiko\base_connection.py", line 332, in _open
+    self.establish_connection()
+  File "C:\Program Files\Python38\lib\site-packages\netmiko\base_connection.py", line 899, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "C:\Program Files\Python38\lib\site-packages\paramiko\client.py", line 435, in connect
+    self._auth(
+  File "C:\Program Files\Python38\lib\site-packages\paramiko\client.py", line 765, in _auth
+    raise SSHException("No authentication methods available")
+paramiko.ssh_exception.SSHException: No authentication methods available
+
+2020-08-03 14:35:42,214 - nornir.core.task -    ERROR -      start() - Host 'ORC_ADMIN_BBH_01': task 'netmiko_send_command' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "C:\Program Files\Python38\lib\site-packages\nornir\plugins\tasks\networking\netmiko_send_command.py", line 26, in netmiko_send_command
+    net_connect = task.host.get_connection("netmiko", task.nornir.config)
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\inventory.py", line 294, in get_connection
+    self.open_connection(
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\inventory.py", line 345, in open_connection
+    self.connections[connection].open(
+  File "C:\Program Files\Python38\lib\site-packages\nornir\plugins\connections\netmiko.py", line 58, in open
+    self.connection = ConnectHandler(**parameters)
+  File "C:\Program Files\Python38\lib\site-packages\netmiko\ssh_dispatcher.py", line 266, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "C:\Program Files\Python38\lib\site-packages\netmiko\base_connection.py", line 327, in __init__
+    self._open()
+  File "C:\Program Files\Python38\lib\site-packages\netmiko\base_connection.py", line 332, in _open
+    self.establish_connection()
+  File "C:\Program Files\Python38\lib\site-packages\netmiko\base_connection.py", line 899, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "C:\Program Files\Python38\lib\site-packages\paramiko\client.py", line 435, in connect
+    self._auth(
+  File "C:\Program Files\Python38\lib\site-packages\paramiko\client.py", line 765, in _auth
+    raise SSHException("No authentication methods available")
+paramiko.ssh_exception.SSHException: No authentication methods available
+
+2020-08-03 14:35:42,214 - nornir.core.task -    ERROR -      start() - Host 'ORC_Admin_Wine_Room': task 'netmiko_send_command' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "C:\Program Files\Python38\lib\site-packages\nornir\plugins\tasks\networking\netmiko_send_command.py", line 26, in netmiko_send_command
+    net_connect = task.host.get_connection("netmiko", task.nornir.config)
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\inventory.py", line 294, in get_connection
+    self.open_connection(
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\inventory.py", line 345, in open_connection
+    self.connections[connection].open(
+  File "C:\Program Files\Python38\lib\site-packages\nornir\plugins\connections\netmiko.py", line 58, in open
+    self.connection = ConnectHandler(**parameters)
+  File "C:\Program Files\Python38\lib\site-packages\netmiko\ssh_dispatcher.py", line 266, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "C:\Program Files\Python38\lib\site-packages\netmiko\base_connection.py", line 327, in __init__
+    self._open()
+  File "C:\Program Files\Python38\lib\site-packages\netmiko\base_connection.py", line 332, in _open
+    self.establish_connection()
+  File "C:\Program Files\Python38\lib\site-packages\netmiko\base_connection.py", line 899, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "C:\Program Files\Python38\lib\site-packages\paramiko\client.py", line 435, in connect
+    self._auth(
+  File "C:\Program Files\Python38\lib\site-packages\paramiko\client.py", line 765, in _auth
+    raise SSHException("No authentication methods available")
+paramiko.ssh_exception.SSHException: No authentication methods available
+
+2020-08-03 14:35:42,214 - nornir.core.task -    ERROR -      start() - Host 'ORC_ADMIN_BASESWITCH': task 'netmiko_send_command' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "C:\Program Files\Python38\lib\site-packages\nornir\plugins\tasks\networking\netmiko_send_command.py", line 26, in netmiko_send_command
+    net_connect = task.host.get_connection("netmiko", task.nornir.config)
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\inventory.py", line 294, in get_connection
+    self.open_connection(
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\inventory.py", line 345, in open_connection
+    self.connections[connection].open(
+  File "C:\Program Files\Python38\lib\site-packages\nornir\plugins\connections\netmiko.py", line 58, in open
+    self.connection = ConnectHandler(**parameters)
+  File "C:\Program Files\Python38\lib\site-packages\netmiko\ssh_dispatcher.py", line 266, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "C:\Program Files\Python38\lib\site-packages\netmiko\base_connection.py", line 327, in __init__
+    self._open()
+  File "C:\Program Files\Python38\lib\site-packages\netmiko\base_connection.py", line 332, in _open
+    self.establish_connection()
+  File "C:\Program Files\Python38\lib\site-packages\netmiko\base_connection.py", line 899, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "C:\Program Files\Python38\lib\site-packages\paramiko\client.py", line 435, in connect
+    self._auth(
+  File "C:\Program Files\Python38\lib\site-packages\paramiko\client.py", line 765, in _auth
+    raise SSHException("No authentication methods available")
+paramiko.ssh_exception.SSHException: No authentication methods available
+
+2020-08-03 14:35:42,214 - nornir.core.task -    ERROR -      start() - Host 'ORC_ADMIN_BASESWITCH_02': task 'dev_info' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "inventory.py", line 15, in dev_info
+    r = task.run(netmiko_send_command, command_string="show version", use_genie=True)
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\task.py", line 147, in run
+    raise NornirSubTaskError(task=task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: <function netmiko_send_command at 0x000001E3E3458B80> (failed)
+
+
+2020-08-03 14:35:42,214 - nornir.core.task -    ERROR -      start() - Host 'ORC_ADMIN_BBH_01': task 'dev_info' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "inventory.py", line 15, in dev_info
+    r = task.run(netmiko_send_command, command_string="show version", use_genie=True)
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\task.py", line 147, in run
+    raise NornirSubTaskError(task=task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: <function netmiko_send_command at 0x000001E3E3458B80> (failed)
+
+
+2020-08-03 14:35:42,215 - nornir.core.task -    ERROR -      start() - Host 'ORC_Admin_SR_04': task 'dev_info' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "inventory.py", line 15, in dev_info
+    r = task.run(netmiko_send_command, command_string="show version", use_genie=True)
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\task.py", line 147, in run
+    raise NornirSubTaskError(task=task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: <function netmiko_send_command at 0x000001E3E3458B80> (failed)
+
+
+2020-08-03 14:35:42,215 - nornir.core.task -    ERROR -      start() - Host 'ORC_ADMIN_BASESWITCH': task 'dev_info' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "inventory.py", line 15, in dev_info
+    r = task.run(netmiko_send_command, command_string="show version", use_genie=True)
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\task.py", line 147, in run
+    raise NornirSubTaskError(task=task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: <function netmiko_send_command at 0x000001E3E3458B80> (failed)
+
+
+2020-08-03 14:35:42,215 - nornir.core.task -    ERROR -      start() - Host 'ORC_Admin_Wine_Room': task 'dev_info' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "inventory.py", line 15, in dev_info
+    r = task.run(netmiko_send_command, command_string="show version", use_genie=True)
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\task.py", line 147, in run
+    raise NornirSubTaskError(task=task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: <function netmiko_send_command at 0x000001E3E3458B80> (failed)
+
+
+2020-08-03 14:35:42,298 - nornir.core.task -    ERROR -      start() - Host 'ORC_Admin_SR_02': task 'netmiko_send_command' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "C:\Program Files\Python38\lib\site-packages\nornir\plugins\tasks\networking\netmiko_send_command.py", line 26, in netmiko_send_command
+    net_connect = task.host.get_connection("netmiko", task.nornir.config)
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\inventory.py", line 294, in get_connection
+    self.open_connection(
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\inventory.py", line 345, in open_connection
+    self.connections[connection].open(
+  File "C:\Program Files\Python38\lib\site-packages\nornir\plugins\connections\netmiko.py", line 58, in open
+    self.connection = ConnectHandler(**parameters)
+  File "C:\Program Files\Python38\lib\site-packages\netmiko\ssh_dispatcher.py", line 266, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "C:\Program Files\Python38\lib\site-packages\netmiko\base_connection.py", line 327, in __init__
+    self._open()
+  File "C:\Program Files\Python38\lib\site-packages\netmiko\base_connection.py", line 332, in _open
+    self.establish_connection()
+  File "C:\Program Files\Python38\lib\site-packages\netmiko\base_connection.py", line 899, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "C:\Program Files\Python38\lib\site-packages\paramiko\client.py", line 435, in connect
+    self._auth(
+  File "C:\Program Files\Python38\lib\site-packages\paramiko\client.py", line 765, in _auth
+    raise SSHException("No authentication methods available")
+paramiko.ssh_exception.SSHException: No authentication methods available
+
+2020-08-03 14:35:42,298 - nornir.core.task -    ERROR -      start() - Host 'ORC_Admin_SR_02': task 'dev_info' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "inventory.py", line 15, in dev_info
+    r = task.run(netmiko_send_command, command_string="show version", use_genie=True)
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\task.py", line 147, in run
+    raise NornirSubTaskError(task=task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: <function netmiko_send_command at 0x000001E3E3458B80> (failed)
+
+
+2020-08-03 14:35:42,461 - nornir.core.task -    ERROR -      start() - Host 'ORC_Admin_SR_01': task 'netmiko_send_command' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "C:\Program Files\Python38\lib\site-packages\nornir\plugins\tasks\networking\netmiko_send_command.py", line 26, in netmiko_send_command
+    net_connect = task.host.get_connection("netmiko", task.nornir.config)
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\inventory.py", line 294, in get_connection
+    self.open_connection(
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\inventory.py", line 345, in open_connection
+    self.connections[connection].open(
+  File "C:\Program Files\Python38\lib\site-packages\nornir\plugins\connections\netmiko.py", line 58, in open
+    self.connection = ConnectHandler(**parameters)
+  File "C:\Program Files\Python38\lib\site-packages\netmiko\ssh_dispatcher.py", line 266, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "C:\Program Files\Python38\lib\site-packages\netmiko\base_connection.py", line 327, in __init__
+    self._open()
+  File "C:\Program Files\Python38\lib\site-packages\netmiko\base_connection.py", line 332, in _open
+    self.establish_connection()
+  File "C:\Program Files\Python38\lib\site-packages\netmiko\base_connection.py", line 899, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "C:\Program Files\Python38\lib\site-packages\paramiko\client.py", line 435, in connect
+    self._auth(
+  File "C:\Program Files\Python38\lib\site-packages\paramiko\client.py", line 765, in _auth
+    raise SSHException("No authentication methods available")
+paramiko.ssh_exception.SSHException: No authentication methods available
+
+2020-08-03 14:35:42,461 - nornir.core.task -    ERROR -      start() - Host 'ORC_Admin_SR_05': task 'netmiko_send_command' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "C:\Program Files\Python38\lib\site-packages\nornir\plugins\tasks\networking\netmiko_send_command.py", line 26, in netmiko_send_command
+    net_connect = task.host.get_connection("netmiko", task.nornir.config)
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\inventory.py", line 294, in get_connection
+    self.open_connection(
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\inventory.py", line 345, in open_connection
+    self.connections[connection].open(
+  File "C:\Program Files\Python38\lib\site-packages\nornir\plugins\connections\netmiko.py", line 58, in open
+    self.connection = ConnectHandler(**parameters)
+  File "C:\Program Files\Python38\lib\site-packages\netmiko\ssh_dispatcher.py", line 266, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "C:\Program Files\Python38\lib\site-packages\netmiko\base_connection.py", line 327, in __init__
+    self._open()
+  File "C:\Program Files\Python38\lib\site-packages\netmiko\base_connection.py", line 332, in _open
+    self.establish_connection()
+  File "C:\Program Files\Python38\lib\site-packages\netmiko\base_connection.py", line 899, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "C:\Program Files\Python38\lib\site-packages\paramiko\client.py", line 435, in connect
+    self._auth(
+  File "C:\Program Files\Python38\lib\site-packages\paramiko\client.py", line 765, in _auth
+    raise SSHException("No authentication methods available")
+paramiko.ssh_exception.SSHException: No authentication methods available
+
+2020-08-03 14:35:42,461 - nornir.core.task -    ERROR -      start() - Host 'ORC_Admin_SR_01': task 'dev_info' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "inventory.py", line 15, in dev_info
+    r = task.run(netmiko_send_command, command_string="show version", use_genie=True)
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\task.py", line 147, in run
+    raise NornirSubTaskError(task=task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: <function netmiko_send_command at 0x000001E3E3458B80> (failed)
+
+
+2020-08-03 14:35:42,462 - nornir.core.task -    ERROR -      start() - Host 'ORC_Admin_SR_05': task 'dev_info' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "inventory.py", line 15, in dev_info
+    r = task.run(netmiko_send_command, command_string="show version", use_genie=True)
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\task.py", line 147, in run
+    raise NornirSubTaskError(task=task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: <function netmiko_send_command at 0x000001E3E3458B80> (failed)
+
+
+2020-08-03 14:35:42,927 - nornir.core.task -    ERROR -      start() - Host 'ORC_Admin_Finance_03': task 'netmiko_send_command' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "C:\Program Files\Python38\lib\site-packages\nornir\plugins\tasks\networking\netmiko_send_command.py", line 26, in netmiko_send_command
+    net_connect = task.host.get_connection("netmiko", task.nornir.config)
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\inventory.py", line 294, in get_connection
+    self.open_connection(
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\inventory.py", line 345, in open_connection
+    self.connections[connection].open(
+  File "C:\Program Files\Python38\lib\site-packages\nornir\plugins\connections\netmiko.py", line 58, in open
+    self.connection = ConnectHandler(**parameters)
+  File "C:\Program Files\Python38\lib\site-packages\netmiko\ssh_dispatcher.py", line 266, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "C:\Program Files\Python38\lib\site-packages\netmiko\base_connection.py", line 327, in __init__
+    self._open()
+  File "C:\Program Files\Python38\lib\site-packages\netmiko\base_connection.py", line 332, in _open
+    self.establish_connection()
+  File "C:\Program Files\Python38\lib\site-packages\netmiko\base_connection.py", line 899, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "C:\Program Files\Python38\lib\site-packages\paramiko\client.py", line 435, in connect
+    self._auth(
+  File "C:\Program Files\Python38\lib\site-packages\paramiko\client.py", line 765, in _auth
+    raise SSHException("No authentication methods available")
+paramiko.ssh_exception.SSHException: No authentication methods available
+
+2020-08-03 14:35:42,927 - nornir.core.task -    ERROR -      start() - Host 'ORC_Admin_IT_Office_01': task 'netmiko_send_command' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "C:\Program Files\Python38\lib\site-packages\nornir\plugins\tasks\networking\netmiko_send_command.py", line 26, in netmiko_send_command
+    net_connect = task.host.get_connection("netmiko", task.nornir.config)
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\inventory.py", line 294, in get_connection
+    self.open_connection(
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\inventory.py", line 345, in open_connection
+    self.connections[connection].open(
+  File "C:\Program Files\Python38\lib\site-packages\nornir\plugins\connections\netmiko.py", line 58, in open
+    self.connection = ConnectHandler(**parameters)
+  File "C:\Program Files\Python38\lib\site-packages\netmiko\ssh_dispatcher.py", line 266, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "C:\Program Files\Python38\lib\site-packages\netmiko\base_connection.py", line 327, in __init__
+    self._open()
+  File "C:\Program Files\Python38\lib\site-packages\netmiko\base_connection.py", line 332, in _open
+    self.establish_connection()
+  File "C:\Program Files\Python38\lib\site-packages\netmiko\base_connection.py", line 899, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "C:\Program Files\Python38\lib\site-packages\paramiko\client.py", line 435, in connect
+    self._auth(
+  File "C:\Program Files\Python38\lib\site-packages\paramiko\client.py", line 765, in _auth
+    raise SSHException("No authentication methods available")
+paramiko.ssh_exception.SSHException: No authentication methods available
+
+2020-08-03 14:35:42,927 - nornir.core.task -    ERROR -      start() - Host 'ORC_Admin_Finance_03': task 'dev_info' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "inventory.py", line 15, in dev_info
+    r = task.run(netmiko_send_command, command_string="show version", use_genie=True)
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\task.py", line 147, in run
+    raise NornirSubTaskError(task=task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: <function netmiko_send_command at 0x000001E3E3458B80> (failed)
+
+
+2020-08-03 14:35:42,928 - nornir.core.task -    ERROR -      start() - Host 'ORC_Admin_Finance_01': task 'netmiko_send_command' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "C:\Program Files\Python38\lib\site-packages\nornir\plugins\tasks\networking\netmiko_send_command.py", line 26, in netmiko_send_command
+    net_connect = task.host.get_connection("netmiko", task.nornir.config)
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\inventory.py", line 294, in get_connection
+    self.open_connection(
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\inventory.py", line 345, in open_connection
+    self.connections[connection].open(
+  File "C:\Program Files\Python38\lib\site-packages\nornir\plugins\connections\netmiko.py", line 58, in open
+    self.connection = ConnectHandler(**parameters)
+  File "C:\Program Files\Python38\lib\site-packages\netmiko\ssh_dispatcher.py", line 266, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "C:\Program Files\Python38\lib\site-packages\netmiko\base_connection.py", line 327, in __init__
+    self._open()
+  File "C:\Program Files\Python38\lib\site-packages\netmiko\base_connection.py", line 332, in _open
+    self.establish_connection()
+  File "C:\Program Files\Python38\lib\site-packages\netmiko\base_connection.py", line 899, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "C:\Program Files\Python38\lib\site-packages\paramiko\client.py", line 435, in connect
+    self._auth(
+  File "C:\Program Files\Python38\lib\site-packages\paramiko\client.py", line 765, in _auth
+    raise SSHException("No authentication methods available")
+paramiko.ssh_exception.SSHException: No authentication methods available
+
+2020-08-03 14:35:42,928 - nornir.core.task -    ERROR -      start() - Host 'ORC_Admin_Finance_01': task 'dev_info' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "inventory.py", line 15, in dev_info
+    r = task.run(netmiko_send_command, command_string="show version", use_genie=True)
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\task.py", line 147, in run
+    raise NornirSubTaskError(task=task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: <function netmiko_send_command at 0x000001E3E3458B80> (failed)
+
+
+2020-08-03 14:35:42,928 - nornir.core.task -    ERROR -      start() - Host 'ORC_Admin_IT_Office_01': task 'dev_info' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "inventory.py", line 15, in dev_info
+    r = task.run(netmiko_send_command, command_string="show version", use_genie=True)
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\task.py", line 147, in run
+    raise NornirSubTaskError(task=task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: <function netmiko_send_command at 0x000001E3E3458B80> (failed)
+
+
+2020-08-03 14:35:42,929 - nornir.core.task -    ERROR -      start() - Host 'ORC_Admin_Finance_02': task 'netmiko_send_command' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "C:\Program Files\Python38\lib\site-packages\nornir\plugins\tasks\networking\netmiko_send_command.py", line 26, in netmiko_send_command
+    net_connect = task.host.get_connection("netmiko", task.nornir.config)
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\inventory.py", line 294, in get_connection
+    self.open_connection(
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\inventory.py", line 345, in open_connection
+    self.connections[connection].open(
+  File "C:\Program Files\Python38\lib\site-packages\nornir\plugins\connections\netmiko.py", line 58, in open
+    self.connection = ConnectHandler(**parameters)
+  File "C:\Program Files\Python38\lib\site-packages\netmiko\ssh_dispatcher.py", line 266, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "C:\Program Files\Python38\lib\site-packages\netmiko\base_connection.py", line 327, in __init__
+    self._open()
+  File "C:\Program Files\Python38\lib\site-packages\netmiko\base_connection.py", line 332, in _open
+    self.establish_connection()
+  File "C:\Program Files\Python38\lib\site-packages\netmiko\base_connection.py", line 899, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "C:\Program Files\Python38\lib\site-packages\paramiko\client.py", line 435, in connect
+    self._auth(
+  File "C:\Program Files\Python38\lib\site-packages\paramiko\client.py", line 765, in _auth
+    raise SSHException("No authentication methods available")
+paramiko.ssh_exception.SSHException: No authentication methods available
+
+2020-08-03 14:35:42,929 - nornir.core.task -    ERROR -      start() - Host 'ORC_Admin_Fairmont_Gold': task 'netmiko_send_command' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "C:\Program Files\Python38\lib\site-packages\nornir\plugins\tasks\networking\netmiko_send_command.py", line 26, in netmiko_send_command
+    net_connect = task.host.get_connection("netmiko", task.nornir.config)
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\inventory.py", line 294, in get_connection
+    self.open_connection(
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\inventory.py", line 345, in open_connection
+    self.connections[connection].open(
+  File "C:\Program Files\Python38\lib\site-packages\nornir\plugins\connections\netmiko.py", line 58, in open
+    self.connection = ConnectHandler(**parameters)
+  File "C:\Program Files\Python38\lib\site-packages\netmiko\ssh_dispatcher.py", line 266, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "C:\Program Files\Python38\lib\site-packages\netmiko\base_connection.py", line 327, in __init__
+    self._open()
+  File "C:\Program Files\Python38\lib\site-packages\netmiko\base_connection.py", line 332, in _open
+    self.establish_connection()
+  File "C:\Program Files\Python38\lib\site-packages\netmiko\base_connection.py", line 899, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "C:\Program Files\Python38\lib\site-packages\paramiko\client.py", line 435, in connect
+    self._auth(
+  File "C:\Program Files\Python38\lib\site-packages\paramiko\client.py", line 765, in _auth
+    raise SSHException("No authentication methods available")
+paramiko.ssh_exception.SSHException: No authentication methods available
+
+2020-08-03 14:35:42,929 - nornir.core.task -    ERROR -      start() - Host 'ORC_Admin_Fairmont_Gold': task 'dev_info' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "inventory.py", line 15, in dev_info
+    r = task.run(netmiko_send_command, command_string="show version", use_genie=True)
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\task.py", line 147, in run
+    raise NornirSubTaskError(task=task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: <function netmiko_send_command at 0x000001E3E3458B80> (failed)
+
+
+2020-08-03 14:35:42,929 - nornir.core.task -    ERROR -      start() - Host 'ORC_Admin_Finance_02': task 'dev_info' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "inventory.py", line 15, in dev_info
+    r = task.run(netmiko_send_command, command_string="show version", use_genie=True)
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\task.py", line 147, in run
+    raise NornirSubTaskError(task=task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: <function netmiko_send_command at 0x000001E3E3458B80> (failed)
+
+
+2020-08-03 14:35:42,930 - nornir.core.task -    ERROR -      start() - Host 'ORC_Admin_SR_03': task 'netmiko_send_command' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "C:\Program Files\Python38\lib\site-packages\nornir\plugins\tasks\networking\netmiko_send_command.py", line 26, in netmiko_send_command
+    net_connect = task.host.get_connection("netmiko", task.nornir.config)
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\inventory.py", line 294, in get_connection
+    self.open_connection(
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\inventory.py", line 345, in open_connection
+    self.connections[connection].open(
+  File "C:\Program Files\Python38\lib\site-packages\nornir\plugins\connections\netmiko.py", line 58, in open
+    self.connection = ConnectHandler(**parameters)
+  File "C:\Program Files\Python38\lib\site-packages\netmiko\ssh_dispatcher.py", line 266, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "C:\Program Files\Python38\lib\site-packages\netmiko\base_connection.py", line 327, in __init__
+    self._open()
+  File "C:\Program Files\Python38\lib\site-packages\netmiko\base_connection.py", line 332, in _open
+    self.establish_connection()
+  File "C:\Program Files\Python38\lib\site-packages\netmiko\base_connection.py", line 899, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "C:\Program Files\Python38\lib\site-packages\paramiko\client.py", line 435, in connect
+    self._auth(
+  File "C:\Program Files\Python38\lib\site-packages\paramiko\client.py", line 765, in _auth
+    raise SSHException("No authentication methods available")
+paramiko.ssh_exception.SSHException: No authentication methods available
+
+2020-08-03 14:35:42,930 - nornir.core.task -    ERROR -      start() - Host 'ORC_Admin_SR_03': task 'dev_info' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "inventory.py", line 15, in dev_info
+    r = task.run(netmiko_send_command, command_string="show version", use_genie=True)
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\task.py", line 147, in run
+    raise NornirSubTaskError(task=task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: <function netmiko_send_command at 0x000001E3E3458B80> (failed)
+
+
+2020-08-03 14:35:43,093 - nornir.core.task -    ERROR -      start() - Host 'ORC_ADMIN_RSHACK_01': task 'netmiko_send_command' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "C:\Program Files\Python38\lib\site-packages\nornir\plugins\tasks\networking\netmiko_send_command.py", line 26, in netmiko_send_command
+    net_connect = task.host.get_connection("netmiko", task.nornir.config)
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\inventory.py", line 294, in get_connection
+    self.open_connection(
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\inventory.py", line 345, in open_connection
+    self.connections[connection].open(
+  File "C:\Program Files\Python38\lib\site-packages\nornir\plugins\connections\netmiko.py", line 58, in open
+    self.connection = ConnectHandler(**parameters)
+  File "C:\Program Files\Python38\lib\site-packages\netmiko\ssh_dispatcher.py", line 266, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "C:\Program Files\Python38\lib\site-packages\netmiko\base_connection.py", line 327, in __init__
+    self._open()
+  File "C:\Program Files\Python38\lib\site-packages\netmiko\base_connection.py", line 332, in _open
+    self.establish_connection()
+  File "C:\Program Files\Python38\lib\site-packages\netmiko\base_connection.py", line 899, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "C:\Program Files\Python38\lib\site-packages\paramiko\client.py", line 435, in connect
+    self._auth(
+  File "C:\Program Files\Python38\lib\site-packages\paramiko\client.py", line 765, in _auth
+    raise SSHException("No authentication methods available")
+paramiko.ssh_exception.SSHException: No authentication methods available
+
+2020-08-03 14:35:43,093 - nornir.core.task -    ERROR -      start() - Host 'ORC_Admin_SR_06': task 'netmiko_send_command' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "C:\Program Files\Python38\lib\site-packages\nornir\plugins\tasks\networking\netmiko_send_command.py", line 26, in netmiko_send_command
+    net_connect = task.host.get_connection("netmiko", task.nornir.config)
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\inventory.py", line 294, in get_connection
+    self.open_connection(
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\inventory.py", line 345, in open_connection
+    self.connections[connection].open(
+  File "C:\Program Files\Python38\lib\site-packages\nornir\plugins\connections\netmiko.py", line 58, in open
+    self.connection = ConnectHandler(**parameters)
+  File "C:\Program Files\Python38\lib\site-packages\netmiko\ssh_dispatcher.py", line 266, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "C:\Program Files\Python38\lib\site-packages\netmiko\base_connection.py", line 327, in __init__
+    self._open()
+  File "C:\Program Files\Python38\lib\site-packages\netmiko\base_connection.py", line 332, in _open
+    self.establish_connection()
+  File "C:\Program Files\Python38\lib\site-packages\netmiko\base_connection.py", line 899, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "C:\Program Files\Python38\lib\site-packages\paramiko\client.py", line 435, in connect
+    self._auth(
+  File "C:\Program Files\Python38\lib\site-packages\paramiko\client.py", line 765, in _auth
+    raise SSHException("No authentication methods available")
+paramiko.ssh_exception.SSHException: No authentication methods available
+
+2020-08-03 14:35:43,093 - nornir.core.task -    ERROR -      start() - Host 'ORC_ADMIN_RSHACK_01': task 'dev_info' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "inventory.py", line 15, in dev_info
+    r = task.run(netmiko_send_command, command_string="show version", use_genie=True)
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\task.py", line 147, in run
+    raise NornirSubTaskError(task=task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: <function netmiko_send_command at 0x000001E3E3458B80> (failed)
+
+
+2020-08-03 14:35:43,094 - nornir.core.task -    ERROR -      start() - Host 'ORC_Admin_SR_06': task 'dev_info' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "inventory.py", line 15, in dev_info
+    r = task.run(netmiko_send_command, command_string="show version", use_genie=True)
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\task.py", line 147, in run
+    raise NornirSubTaskError(task=task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: <function netmiko_send_command at 0x000001E3E3458B80> (failed)
+
+
+2020-08-03 14:37:21,252 -  nornir.core -     INFO -        run() - Running task 'dev_info' with args {} on 16 hosts
+2020-08-03 14:37:22,011 - nornir.core.task -    ERROR -      start() - Host 'ORC_ADMIN_BASESWITCH_02': task 'netmiko_send_command' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "C:\Program Files\Python38\lib\site-packages\nornir\plugins\tasks\networking\netmiko_send_command.py", line 26, in netmiko_send_command
+    net_connect = task.host.get_connection("netmiko", task.nornir.config)
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\inventory.py", line 294, in get_connection
+    self.open_connection(
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\inventory.py", line 345, in open_connection
+    self.connections[connection].open(
+  File "C:\Program Files\Python38\lib\site-packages\nornir\plugins\connections\netmiko.py", line 58, in open
+    self.connection = ConnectHandler(**parameters)
+  File "C:\Program Files\Python38\lib\site-packages\netmiko\ssh_dispatcher.py", line 246, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "C:\Program Files\Python38\lib\site-packages\netmiko\base_connection.py", line 317, in __init__
+    self._open()
+  File "C:\Program Files\Python38\lib\site-packages\netmiko\base_connection.py", line 322, in _open
+    self.establish_connection()
+  File "C:\Program Files\Python38\lib\site-packages\netmiko\base_connection.py", line 884, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "C:\Program Files\Python38\lib\site-packages\paramiko\client.py", line 435, in connect
+    self._auth(
+  File "C:\Program Files\Python38\lib\site-packages\paramiko\client.py", line 765, in _auth
+    raise SSHException("No authentication methods available")
+paramiko.ssh_exception.SSHException: No authentication methods available
+
+2020-08-03 14:37:22,011 - nornir.core.task -    ERROR -      start() - Host 'ORC_ADMIN_BBH_01': task 'netmiko_send_command' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "C:\Program Files\Python38\lib\site-packages\nornir\plugins\tasks\networking\netmiko_send_command.py", line 26, in netmiko_send_command
+    net_connect = task.host.get_connection("netmiko", task.nornir.config)
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\inventory.py", line 294, in get_connection
+    self.open_connection(
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\inventory.py", line 345, in open_connection
+    self.connections[connection].open(
+  File "C:\Program Files\Python38\lib\site-packages\nornir\plugins\connections\netmiko.py", line 58, in open
+    self.connection = ConnectHandler(**parameters)
+  File "C:\Program Files\Python38\lib\site-packages\netmiko\ssh_dispatcher.py", line 246, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "C:\Program Files\Python38\lib\site-packages\netmiko\base_connection.py", line 317, in __init__
+    self._open()
+  File "C:\Program Files\Python38\lib\site-packages\netmiko\base_connection.py", line 322, in _open
+    self.establish_connection()
+  File "C:\Program Files\Python38\lib\site-packages\netmiko\base_connection.py", line 884, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "C:\Program Files\Python38\lib\site-packages\paramiko\client.py", line 435, in connect
+    self._auth(
+  File "C:\Program Files\Python38\lib\site-packages\paramiko\client.py", line 765, in _auth
+    raise SSHException("No authentication methods available")
+paramiko.ssh_exception.SSHException: No authentication methods available
+
+2020-08-03 14:37:22,012 - nornir.core.task -    ERROR -      start() - Host 'ORC_Admin_SR_04': task 'netmiko_send_command' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "C:\Program Files\Python38\lib\site-packages\nornir\plugins\tasks\networking\netmiko_send_command.py", line 26, in netmiko_send_command
+    net_connect = task.host.get_connection("netmiko", task.nornir.config)
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\inventory.py", line 294, in get_connection
+    self.open_connection(
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\inventory.py", line 345, in open_connection
+    self.connections[connection].open(
+  File "C:\Program Files\Python38\lib\site-packages\nornir\plugins\connections\netmiko.py", line 58, in open
+    self.connection = ConnectHandler(**parameters)
+  File "C:\Program Files\Python38\lib\site-packages\netmiko\ssh_dispatcher.py", line 246, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "C:\Program Files\Python38\lib\site-packages\netmiko\base_connection.py", line 317, in __init__
+    self._open()
+  File "C:\Program Files\Python38\lib\site-packages\netmiko\base_connection.py", line 322, in _open
+    self.establish_connection()
+  File "C:\Program Files\Python38\lib\site-packages\netmiko\base_connection.py", line 884, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "C:\Program Files\Python38\lib\site-packages\paramiko\client.py", line 435, in connect
+    self._auth(
+  File "C:\Program Files\Python38\lib\site-packages\paramiko\client.py", line 765, in _auth
+    raise SSHException("No authentication methods available")
+paramiko.ssh_exception.SSHException: No authentication methods available
+
+2020-08-03 14:37:22,012 - nornir.core.task -    ERROR -      start() - Host 'ORC_ADMIN_BASESWITCH_02': task 'dev_info' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "inventory.py", line 15, in dev_info
+    r = task.run(netmiko_send_command, command_string="show version", use_genie=True)
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\task.py", line 147, in run
+    raise NornirSubTaskError(task=task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: <function netmiko_send_command at 0x0000022D71A8D550> (failed)
+
+
+2020-08-03 14:37:22,013 - nornir.core.task -    ERROR -      start() - Host 'ORC_Admin_SR_04': task 'dev_info' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "inventory.py", line 15, in dev_info
+    r = task.run(netmiko_send_command, command_string="show version", use_genie=True)
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\task.py", line 147, in run
+    raise NornirSubTaskError(task=task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: <function netmiko_send_command at 0x0000022D71A8D550> (failed)
+
+
+2020-08-03 14:37:22,013 - nornir.core.task -    ERROR -      start() - Host 'ORC_ADMIN_BBH_01': task 'dev_info' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "inventory.py", line 15, in dev_info
+    r = task.run(netmiko_send_command, command_string="show version", use_genie=True)
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\task.py", line 147, in run
+    raise NornirSubTaskError(task=task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: <function netmiko_send_command at 0x0000022D71A8D550> (failed)
+
+
+2020-08-03 14:37:22,094 - nornir.core.task -    ERROR -      start() - Host 'ORC_ADMIN_BASESWITCH': task 'netmiko_send_command' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "C:\Program Files\Python38\lib\site-packages\nornir\plugins\tasks\networking\netmiko_send_command.py", line 26, in netmiko_send_command
+    net_connect = task.host.get_connection("netmiko", task.nornir.config)
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\inventory.py", line 294, in get_connection
+    self.open_connection(
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\inventory.py", line 345, in open_connection
+    self.connections[connection].open(
+  File "C:\Program Files\Python38\lib\site-packages\nornir\plugins\connections\netmiko.py", line 58, in open
+    self.connection = ConnectHandler(**parameters)
+  File "C:\Program Files\Python38\lib\site-packages\netmiko\ssh_dispatcher.py", line 246, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "C:\Program Files\Python38\lib\site-packages\netmiko\base_connection.py", line 317, in __init__
+    self._open()
+  File "C:\Program Files\Python38\lib\site-packages\netmiko\base_connection.py", line 322, in _open
+    self.establish_connection()
+  File "C:\Program Files\Python38\lib\site-packages\netmiko\base_connection.py", line 884, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "C:\Program Files\Python38\lib\site-packages\paramiko\client.py", line 435, in connect
+    self._auth(
+  File "C:\Program Files\Python38\lib\site-packages\paramiko\client.py", line 765, in _auth
+    raise SSHException("No authentication methods available")
+paramiko.ssh_exception.SSHException: No authentication methods available
+
+2020-08-03 14:37:22,094 - nornir.core.task -    ERROR -      start() - Host 'ORC_ADMIN_BASESWITCH': task 'dev_info' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "inventory.py", line 15, in dev_info
+    r = task.run(netmiko_send_command, command_string="show version", use_genie=True)
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\task.py", line 147, in run
+    raise NornirSubTaskError(task=task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: <function netmiko_send_command at 0x0000022D71A8D550> (failed)
+
+
+2020-08-03 14:37:22,209 - nornir.core.task -    ERROR -      start() - Host 'ORC_Admin_SR_02': task 'netmiko_send_command' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "C:\Program Files\Python38\lib\site-packages\nornir\plugins\tasks\networking\netmiko_send_command.py", line 26, in netmiko_send_command
+    net_connect = task.host.get_connection("netmiko", task.nornir.config)
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\inventory.py", line 294, in get_connection
+    self.open_connection(
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\inventory.py", line 345, in open_connection
+    self.connections[connection].open(
+  File "C:\Program Files\Python38\lib\site-packages\nornir\plugins\connections\netmiko.py", line 58, in open
+    self.connection = ConnectHandler(**parameters)
+  File "C:\Program Files\Python38\lib\site-packages\netmiko\ssh_dispatcher.py", line 246, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "C:\Program Files\Python38\lib\site-packages\netmiko\base_connection.py", line 317, in __init__
+    self._open()
+  File "C:\Program Files\Python38\lib\site-packages\netmiko\base_connection.py", line 322, in _open
+    self.establish_connection()
+  File "C:\Program Files\Python38\lib\site-packages\netmiko\base_connection.py", line 884, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "C:\Program Files\Python38\lib\site-packages\paramiko\client.py", line 435, in connect
+    self._auth(
+  File "C:\Program Files\Python38\lib\site-packages\paramiko\client.py", line 765, in _auth
+    raise SSHException("No authentication methods available")
+paramiko.ssh_exception.SSHException: No authentication methods available
+
+2020-08-03 14:37:22,209 - nornir.core.task -    ERROR -      start() - Host 'ORC_Admin_SR_02': task 'dev_info' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "inventory.py", line 15, in dev_info
+    r = task.run(netmiko_send_command, command_string="show version", use_genie=True)
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\task.py", line 147, in run
+    raise NornirSubTaskError(task=task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: <function netmiko_send_command at 0x0000022D71A8D550> (failed)
+
+
+2020-08-03 14:37:22,389 - nornir.core.task -    ERROR -      start() - Host 'ORC_Admin_SR_05': task 'netmiko_send_command' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "C:\Program Files\Python38\lib\site-packages\nornir\plugins\tasks\networking\netmiko_send_command.py", line 26, in netmiko_send_command
+    net_connect = task.host.get_connection("netmiko", task.nornir.config)
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\inventory.py", line 294, in get_connection
+    self.open_connection(
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\inventory.py", line 345, in open_connection
+    self.connections[connection].open(
+  File "C:\Program Files\Python38\lib\site-packages\nornir\plugins\connections\netmiko.py", line 58, in open
+    self.connection = ConnectHandler(**parameters)
+  File "C:\Program Files\Python38\lib\site-packages\netmiko\ssh_dispatcher.py", line 246, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "C:\Program Files\Python38\lib\site-packages\netmiko\base_connection.py", line 317, in __init__
+    self._open()
+  File "C:\Program Files\Python38\lib\site-packages\netmiko\base_connection.py", line 322, in _open
+    self.establish_connection()
+  File "C:\Program Files\Python38\lib\site-packages\netmiko\base_connection.py", line 884, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "C:\Program Files\Python38\lib\site-packages\paramiko\client.py", line 435, in connect
+    self._auth(
+  File "C:\Program Files\Python38\lib\site-packages\paramiko\client.py", line 765, in _auth
+    raise SSHException("No authentication methods available")
+paramiko.ssh_exception.SSHException: No authentication methods available
+
+2020-08-03 14:37:22,389 - nornir.core.task -    ERROR -      start() - Host 'ORC_Admin_SR_01': task 'netmiko_send_command' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "C:\Program Files\Python38\lib\site-packages\nornir\plugins\tasks\networking\netmiko_send_command.py", line 26, in netmiko_send_command
+    net_connect = task.host.get_connection("netmiko", task.nornir.config)
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\inventory.py", line 294, in get_connection
+    self.open_connection(
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\inventory.py", line 345, in open_connection
+    self.connections[connection].open(
+  File "C:\Program Files\Python38\lib\site-packages\nornir\plugins\connections\netmiko.py", line 58, in open
+    self.connection = ConnectHandler(**parameters)
+  File "C:\Program Files\Python38\lib\site-packages\netmiko\ssh_dispatcher.py", line 246, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "C:\Program Files\Python38\lib\site-packages\netmiko\base_connection.py", line 317, in __init__
+    self._open()
+  File "C:\Program Files\Python38\lib\site-packages\netmiko\base_connection.py", line 322, in _open
+    self.establish_connection()
+  File "C:\Program Files\Python38\lib\site-packages\netmiko\base_connection.py", line 884, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "C:\Program Files\Python38\lib\site-packages\paramiko\client.py", line 435, in connect
+    self._auth(
+  File "C:\Program Files\Python38\lib\site-packages\paramiko\client.py", line 765, in _auth
+    raise SSHException("No authentication methods available")
+paramiko.ssh_exception.SSHException: No authentication methods available
+
+2020-08-03 14:37:22,390 - nornir.core.task -    ERROR -      start() - Host 'ORC_Admin_SR_05': task 'dev_info' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "inventory.py", line 15, in dev_info
+    r = task.run(netmiko_send_command, command_string="show version", use_genie=True)
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\task.py", line 147, in run
+    raise NornirSubTaskError(task=task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: <function netmiko_send_command at 0x0000022D71A8D550> (failed)
+
+
+2020-08-03 14:37:22,390 - nornir.core.task -    ERROR -      start() - Host 'ORC_Admin_SR_01': task 'dev_info' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "inventory.py", line 15, in dev_info
+    r = task.run(netmiko_send_command, command_string="show version", use_genie=True)
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\task.py", line 147, in run
+    raise NornirSubTaskError(task=task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: <function netmiko_send_command at 0x0000022D71A8D550> (failed)
+
+
+2020-08-03 14:37:22,682 - nornir.core.task -    ERROR -      start() - Host 'ORC_Admin_SR_03': task 'netmiko_send_command' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "C:\Program Files\Python38\lib\site-packages\nornir\plugins\tasks\networking\netmiko_send_command.py", line 26, in netmiko_send_command
+    net_connect = task.host.get_connection("netmiko", task.nornir.config)
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\inventory.py", line 294, in get_connection
+    self.open_connection(
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\inventory.py", line 345, in open_connection
+    self.connections[connection].open(
+  File "C:\Program Files\Python38\lib\site-packages\nornir\plugins\connections\netmiko.py", line 58, in open
+    self.connection = ConnectHandler(**parameters)
+  File "C:\Program Files\Python38\lib\site-packages\netmiko\ssh_dispatcher.py", line 246, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "C:\Program Files\Python38\lib\site-packages\netmiko\base_connection.py", line 317, in __init__
+    self._open()
+  File "C:\Program Files\Python38\lib\site-packages\netmiko\base_connection.py", line 322, in _open
+    self.establish_connection()
+  File "C:\Program Files\Python38\lib\site-packages\netmiko\base_connection.py", line 884, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "C:\Program Files\Python38\lib\site-packages\paramiko\client.py", line 435, in connect
+    self._auth(
+  File "C:\Program Files\Python38\lib\site-packages\paramiko\client.py", line 765, in _auth
+    raise SSHException("No authentication methods available")
+paramiko.ssh_exception.SSHException: No authentication methods available
+
+2020-08-03 14:37:22,683 - nornir.core.task -    ERROR -      start() - Host 'ORC_Admin_SR_03': task 'dev_info' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "inventory.py", line 15, in dev_info
+    r = task.run(netmiko_send_command, command_string="show version", use_genie=True)
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\task.py", line 147, in run
+    raise NornirSubTaskError(task=task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: <function netmiko_send_command at 0x0000022D71A8D550> (failed)
+
+
+2020-08-03 14:37:22,683 - nornir.core.task -    ERROR -      start() - Host 'ORC_Admin_Fairmont_Gold': task 'netmiko_send_command' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "C:\Program Files\Python38\lib\site-packages\nornir\plugins\tasks\networking\netmiko_send_command.py", line 26, in netmiko_send_command
+    net_connect = task.host.get_connection("netmiko", task.nornir.config)
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\inventory.py", line 294, in get_connection
+    self.open_connection(
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\inventory.py", line 345, in open_connection
+    self.connections[connection].open(
+  File "C:\Program Files\Python38\lib\site-packages\nornir\plugins\connections\netmiko.py", line 58, in open
+    self.connection = ConnectHandler(**parameters)
+  File "C:\Program Files\Python38\lib\site-packages\netmiko\ssh_dispatcher.py", line 246, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "C:\Program Files\Python38\lib\site-packages\netmiko\base_connection.py", line 317, in __init__
+    self._open()
+  File "C:\Program Files\Python38\lib\site-packages\netmiko\base_connection.py", line 322, in _open
+    self.establish_connection()
+  File "C:\Program Files\Python38\lib\site-packages\netmiko\base_connection.py", line 884, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "C:\Program Files\Python38\lib\site-packages\paramiko\client.py", line 435, in connect
+    self._auth(
+  File "C:\Program Files\Python38\lib\site-packages\paramiko\client.py", line 765, in _auth
+    raise SSHException("No authentication methods available")
+paramiko.ssh_exception.SSHException: No authentication methods available
+
+2020-08-03 14:37:22,683 - nornir.core.task -    ERROR -      start() - Host 'ORC_Admin_IT_Office_01': task 'netmiko_send_command' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "C:\Program Files\Python38\lib\site-packages\nornir\plugins\tasks\networking\netmiko_send_command.py", line 26, in netmiko_send_command
+    net_connect = task.host.get_connection("netmiko", task.nornir.config)
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\inventory.py", line 294, in get_connection
+    self.open_connection(
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\inventory.py", line 345, in open_connection
+    self.connections[connection].open(
+  File "C:\Program Files\Python38\lib\site-packages\nornir\plugins\connections\netmiko.py", line 58, in open
+    self.connection = ConnectHandler(**parameters)
+  File "C:\Program Files\Python38\lib\site-packages\netmiko\ssh_dispatcher.py", line 246, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "C:\Program Files\Python38\lib\site-packages\netmiko\base_connection.py", line 317, in __init__
+    self._open()
+  File "C:\Program Files\Python38\lib\site-packages\netmiko\base_connection.py", line 322, in _open
+    self.establish_connection()
+  File "C:\Program Files\Python38\lib\site-packages\netmiko\base_connection.py", line 884, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "C:\Program Files\Python38\lib\site-packages\paramiko\client.py", line 435, in connect
+    self._auth(
+  File "C:\Program Files\Python38\lib\site-packages\paramiko\client.py", line 765, in _auth
+    raise SSHException("No authentication methods available")
+paramiko.ssh_exception.SSHException: No authentication methods available
+
+2020-08-03 14:37:22,683 - nornir.core.task -    ERROR -      start() - Host 'ORC_Admin_Fairmont_Gold': task 'dev_info' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "inventory.py", line 15, in dev_info
+    r = task.run(netmiko_send_command, command_string="show version", use_genie=True)
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\task.py", line 147, in run
+    raise NornirSubTaskError(task=task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: <function netmiko_send_command at 0x0000022D71A8D550> (failed)
+
+
+2020-08-03 14:37:22,684 - nornir.core.task -    ERROR -      start() - Host 'ORC_Admin_IT_Office_01': task 'dev_info' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "inventory.py", line 15, in dev_info
+    r = task.run(netmiko_send_command, command_string="show version", use_genie=True)
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\task.py", line 147, in run
+    raise NornirSubTaskError(task=task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: <function netmiko_send_command at 0x0000022D71A8D550> (failed)
+
+
+2020-08-03 14:37:22,810 - nornir.core.task -    ERROR -      start() - Host 'ORC_Admin_Finance_01': task 'netmiko_send_command' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "C:\Program Files\Python38\lib\site-packages\nornir\plugins\tasks\networking\netmiko_send_command.py", line 26, in netmiko_send_command
+    net_connect = task.host.get_connection("netmiko", task.nornir.config)
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\inventory.py", line 294, in get_connection
+    self.open_connection(
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\inventory.py", line 345, in open_connection
+    self.connections[connection].open(
+  File "C:\Program Files\Python38\lib\site-packages\nornir\plugins\connections\netmiko.py", line 58, in open
+    self.connection = ConnectHandler(**parameters)
+  File "C:\Program Files\Python38\lib\site-packages\netmiko\ssh_dispatcher.py", line 246, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "C:\Program Files\Python38\lib\site-packages\netmiko\base_connection.py", line 317, in __init__
+    self._open()
+  File "C:\Program Files\Python38\lib\site-packages\netmiko\base_connection.py", line 322, in _open
+    self.establish_connection()
+  File "C:\Program Files\Python38\lib\site-packages\netmiko\base_connection.py", line 884, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "C:\Program Files\Python38\lib\site-packages\paramiko\client.py", line 435, in connect
+    self._auth(
+  File "C:\Program Files\Python38\lib\site-packages\paramiko\client.py", line 765, in _auth
+    raise SSHException("No authentication methods available")
+paramiko.ssh_exception.SSHException: No authentication methods available
+
+2020-08-03 14:37:22,811 - nornir.core.task -    ERROR -      start() - Host 'ORC_Admin_SR_06': task 'netmiko_send_command' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "C:\Program Files\Python38\lib\site-packages\nornir\plugins\tasks\networking\netmiko_send_command.py", line 26, in netmiko_send_command
+    net_connect = task.host.get_connection("netmiko", task.nornir.config)
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\inventory.py", line 294, in get_connection
+    self.open_connection(
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\inventory.py", line 345, in open_connection
+    self.connections[connection].open(
+  File "C:\Program Files\Python38\lib\site-packages\nornir\plugins\connections\netmiko.py", line 58, in open
+    self.connection = ConnectHandler(**parameters)
+  File "C:\Program Files\Python38\lib\site-packages\netmiko\ssh_dispatcher.py", line 246, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "C:\Program Files\Python38\lib\site-packages\netmiko\base_connection.py", line 317, in __init__
+    self._open()
+  File "C:\Program Files\Python38\lib\site-packages\netmiko\base_connection.py", line 322, in _open
+    self.establish_connection()
+  File "C:\Program Files\Python38\lib\site-packages\netmiko\base_connection.py", line 884, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "C:\Program Files\Python38\lib\site-packages\paramiko\client.py", line 435, in connect
+    self._auth(
+  File "C:\Program Files\Python38\lib\site-packages\paramiko\client.py", line 765, in _auth
+    raise SSHException("No authentication methods available")
+paramiko.ssh_exception.SSHException: No authentication methods available
+
+2020-08-03 14:37:22,811 - nornir.core.task -    ERROR -      start() - Host 'ORC_Admin_Finance_01': task 'dev_info' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "inventory.py", line 15, in dev_info
+    r = task.run(netmiko_send_command, command_string="show version", use_genie=True)
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\task.py", line 147, in run
+    raise NornirSubTaskError(task=task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: <function netmiko_send_command at 0x0000022D71A8D550> (failed)
+
+
+2020-08-03 14:37:22,811 - nornir.core.task -    ERROR -      start() - Host 'ORC_Admin_SR_06': task 'dev_info' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "inventory.py", line 15, in dev_info
+    r = task.run(netmiko_send_command, command_string="show version", use_genie=True)
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\task.py", line 147, in run
+    raise NornirSubTaskError(task=task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: <function netmiko_send_command at 0x0000022D71A8D550> (failed)
+
+
+2020-08-03 14:37:23,141 - nornir.core.task -    ERROR -      start() - Host 'ORC_ADMIN_RSHACK_01': task 'netmiko_send_command' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "C:\Program Files\Python38\lib\site-packages\nornir\plugins\tasks\networking\netmiko_send_command.py", line 26, in netmiko_send_command
+    net_connect = task.host.get_connection("netmiko", task.nornir.config)
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\inventory.py", line 294, in get_connection
+    self.open_connection(
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\inventory.py", line 345, in open_connection
+    self.connections[connection].open(
+  File "C:\Program Files\Python38\lib\site-packages\nornir\plugins\connections\netmiko.py", line 58, in open
+    self.connection = ConnectHandler(**parameters)
+  File "C:\Program Files\Python38\lib\site-packages\netmiko\ssh_dispatcher.py", line 246, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "C:\Program Files\Python38\lib\site-packages\netmiko\base_connection.py", line 317, in __init__
+    self._open()
+  File "C:\Program Files\Python38\lib\site-packages\netmiko\base_connection.py", line 322, in _open
+    self.establish_connection()
+  File "C:\Program Files\Python38\lib\site-packages\netmiko\base_connection.py", line 884, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "C:\Program Files\Python38\lib\site-packages\paramiko\client.py", line 435, in connect
+    self._auth(
+  File "C:\Program Files\Python38\lib\site-packages\paramiko\client.py", line 765, in _auth
+    raise SSHException("No authentication methods available")
+paramiko.ssh_exception.SSHException: No authentication methods available
+
+2020-08-03 14:37:23,141 - nornir.core.task -    ERROR -      start() - Host 'ORC_ADMIN_RSHACK_01': task 'dev_info' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "inventory.py", line 15, in dev_info
+    r = task.run(netmiko_send_command, command_string="show version", use_genie=True)
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\task.py", line 147, in run
+    raise NornirSubTaskError(task=task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: <function netmiko_send_command at 0x0000022D71A8D550> (failed)
+
+
+2020-08-03 14:37:24,149 - nornir.core.task -    ERROR -      start() - Host 'ORC_Admin_Finance_02': task 'netmiko_send_command' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "C:\Program Files\Python38\lib\site-packages\nornir\plugins\tasks\networking\netmiko_send_command.py", line 26, in netmiko_send_command
+    net_connect = task.host.get_connection("netmiko", task.nornir.config)
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\inventory.py", line 294, in get_connection
+    self.open_connection(
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\inventory.py", line 345, in open_connection
+    self.connections[connection].open(
+  File "C:\Program Files\Python38\lib\site-packages\nornir\plugins\connections\netmiko.py", line 58, in open
+    self.connection = ConnectHandler(**parameters)
+  File "C:\Program Files\Python38\lib\site-packages\netmiko\ssh_dispatcher.py", line 246, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "C:\Program Files\Python38\lib\site-packages\netmiko\base_connection.py", line 317, in __init__
+    self._open()
+  File "C:\Program Files\Python38\lib\site-packages\netmiko\base_connection.py", line 322, in _open
+    self.establish_connection()
+  File "C:\Program Files\Python38\lib\site-packages\netmiko\base_connection.py", line 884, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "C:\Program Files\Python38\lib\site-packages\paramiko\client.py", line 435, in connect
+    self._auth(
+  File "C:\Program Files\Python38\lib\site-packages\paramiko\client.py", line 765, in _auth
+    raise SSHException("No authentication methods available")
+paramiko.ssh_exception.SSHException: No authentication methods available
+
+2020-08-03 14:37:24,149 - nornir.core.task -    ERROR -      start() - Host 'ORC_Admin_Finance_03': task 'netmiko_send_command' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "C:\Program Files\Python38\lib\site-packages\nornir\plugins\tasks\networking\netmiko_send_command.py", line 26, in netmiko_send_command
+    net_connect = task.host.get_connection("netmiko", task.nornir.config)
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\inventory.py", line 294, in get_connection
+    self.open_connection(
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\inventory.py", line 345, in open_connection
+    self.connections[connection].open(
+  File "C:\Program Files\Python38\lib\site-packages\nornir\plugins\connections\netmiko.py", line 58, in open
+    self.connection = ConnectHandler(**parameters)
+  File "C:\Program Files\Python38\lib\site-packages\netmiko\ssh_dispatcher.py", line 246, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "C:\Program Files\Python38\lib\site-packages\netmiko\base_connection.py", line 317, in __init__
+    self._open()
+  File "C:\Program Files\Python38\lib\site-packages\netmiko\base_connection.py", line 322, in _open
+    self.establish_connection()
+  File "C:\Program Files\Python38\lib\site-packages\netmiko\base_connection.py", line 884, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "C:\Program Files\Python38\lib\site-packages\paramiko\client.py", line 435, in connect
+    self._auth(
+  File "C:\Program Files\Python38\lib\site-packages\paramiko\client.py", line 765, in _auth
+    raise SSHException("No authentication methods available")
+paramiko.ssh_exception.SSHException: No authentication methods available
+
+2020-08-03 14:37:24,150 - nornir.core.task -    ERROR -      start() - Host 'ORC_Admin_Finance_02': task 'dev_info' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "inventory.py", line 15, in dev_info
+    r = task.run(netmiko_send_command, command_string="show version", use_genie=True)
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\task.py", line 147, in run
+    raise NornirSubTaskError(task=task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: <function netmiko_send_command at 0x0000022D71A8D550> (failed)
+
+
+2020-08-03 14:37:24,150 - nornir.core.task -    ERROR -      start() - Host 'ORC_Admin_Finance_03': task 'dev_info' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "inventory.py", line 15, in dev_info
+    r = task.run(netmiko_send_command, command_string="show version", use_genie=True)
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\task.py", line 147, in run
+    raise NornirSubTaskError(task=task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: <function netmiko_send_command at 0x0000022D71A8D550> (failed)
+
+
+2020-08-03 14:37:24,568 - nornir.core.task -    ERROR -      start() - Host 'ORC_Admin_Wine_Room': task 'netmiko_send_command' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "C:\Program Files\Python38\lib\site-packages\nornir\plugins\tasks\networking\netmiko_send_command.py", line 26, in netmiko_send_command
+    net_connect = task.host.get_connection("netmiko", task.nornir.config)
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\inventory.py", line 294, in get_connection
+    self.open_connection(
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\inventory.py", line 345, in open_connection
+    self.connections[connection].open(
+  File "C:\Program Files\Python38\lib\site-packages\nornir\plugins\connections\netmiko.py", line 58, in open
+    self.connection = ConnectHandler(**parameters)
+  File "C:\Program Files\Python38\lib\site-packages\netmiko\ssh_dispatcher.py", line 246, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "C:\Program Files\Python38\lib\site-packages\netmiko\base_connection.py", line 317, in __init__
+    self._open()
+  File "C:\Program Files\Python38\lib\site-packages\netmiko\base_connection.py", line 322, in _open
+    self.establish_connection()
+  File "C:\Program Files\Python38\lib\site-packages\netmiko\base_connection.py", line 884, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "C:\Program Files\Python38\lib\site-packages\paramiko\client.py", line 435, in connect
+    self._auth(
+  File "C:\Program Files\Python38\lib\site-packages\paramiko\client.py", line 765, in _auth
+    raise SSHException("No authentication methods available")
+paramiko.ssh_exception.SSHException: No authentication methods available
+
+2020-08-03 14:37:24,568 - nornir.core.task -    ERROR -      start() - Host 'ORC_Admin_Wine_Room': task 'dev_info' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "inventory.py", line 15, in dev_info
+    r = task.run(netmiko_send_command, command_string="show version", use_genie=True)
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\task.py", line 147, in run
+    raise NornirSubTaskError(task=task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: <function netmiko_send_command at 0x0000022D71A8D550> (failed)
+
+
+2020-08-03 14:43:12,022 -  nornir.core -     INFO -        run() - Running task 'dev_info' with args {} on 16 hosts
+2020-08-03 14:43:12,764 - nornir.core.task -    ERROR -      start() - Host 'ORC_Admin_SR_04': task 'netmiko_send_command' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "C:\Program Files\Python38\lib\site-packages\nornir\plugins\tasks\networking\netmiko_send_command.py", line 26, in netmiko_send_command
+    net_connect = task.host.get_connection("netmiko", task.nornir.config)
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\inventory.py", line 294, in get_connection
+    self.open_connection(
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\inventory.py", line 345, in open_connection
+    self.connections[connection].open(
+  File "C:\Program Files\Python38\lib\site-packages\nornir\plugins\connections\netmiko.py", line 58, in open
+    self.connection = ConnectHandler(**parameters)
+  File "C:\Program Files\Python38\lib\site-packages\netmiko\ssh_dispatcher.py", line 246, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "C:\Program Files\Python38\lib\site-packages\netmiko\base_connection.py", line 317, in __init__
+    self._open()
+  File "C:\Program Files\Python38\lib\site-packages\netmiko\base_connection.py", line 322, in _open
+    self.establish_connection()
+  File "C:\Program Files\Python38\lib\site-packages\netmiko\base_connection.py", line 884, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "C:\Program Files\Python38\lib\site-packages\paramiko\client.py", line 435, in connect
+    self._auth(
+  File "C:\Program Files\Python38\lib\site-packages\paramiko\client.py", line 765, in _auth
+    raise SSHException("No authentication methods available")
+paramiko.ssh_exception.SSHException: No authentication methods available
+
+2020-08-03 14:43:12,770 - nornir.core.task -    ERROR -      start() - Host 'ORC_Admin_SR_04': task 'dev_info' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "inventory.py", line 15, in dev_info
+    r = task.run(netmiko_send_command, command_string="show version", use_genie=True)
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\task.py", line 147, in run
+    raise NornirSubTaskError(task=task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: <function netmiko_send_command at 0x000002159231E4C0> (failed)
+
+
+2020-08-03 14:43:12,859 - nornir.core.task -    ERROR -      start() - Host 'ORC_ADMIN_BASESWITCH': task 'netmiko_send_command' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "C:\Program Files\Python38\lib\site-packages\nornir\plugins\tasks\networking\netmiko_send_command.py", line 26, in netmiko_send_command
+    net_connect = task.host.get_connection("netmiko", task.nornir.config)
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\inventory.py", line 294, in get_connection
+    self.open_connection(
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\inventory.py", line 345, in open_connection
+    self.connections[connection].open(
+  File "C:\Program Files\Python38\lib\site-packages\nornir\plugins\connections\netmiko.py", line 58, in open
+    self.connection = ConnectHandler(**parameters)
+  File "C:\Program Files\Python38\lib\site-packages\netmiko\ssh_dispatcher.py", line 246, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "C:\Program Files\Python38\lib\site-packages\netmiko\base_connection.py", line 317, in __init__
+    self._open()
+  File "C:\Program Files\Python38\lib\site-packages\netmiko\base_connection.py", line 322, in _open
+    self.establish_connection()
+  File "C:\Program Files\Python38\lib\site-packages\netmiko\base_connection.py", line 884, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "C:\Program Files\Python38\lib\site-packages\paramiko\client.py", line 435, in connect
+    self._auth(
+  File "C:\Program Files\Python38\lib\site-packages\paramiko\client.py", line 765, in _auth
+    raise SSHException("No authentication methods available")
+paramiko.ssh_exception.SSHException: No authentication methods available
+
+2020-08-03 14:43:12,860 - nornir.core.task -    ERROR -      start() - Host 'ORC_ADMIN_BBH_01': task 'netmiko_send_command' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "C:\Program Files\Python38\lib\site-packages\nornir\plugins\tasks\networking\netmiko_send_command.py", line 26, in netmiko_send_command
+    net_connect = task.host.get_connection("netmiko", task.nornir.config)
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\inventory.py", line 294, in get_connection
+    self.open_connection(
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\inventory.py", line 345, in open_connection
+    self.connections[connection].open(
+  File "C:\Program Files\Python38\lib\site-packages\nornir\plugins\connections\netmiko.py", line 58, in open
+    self.connection = ConnectHandler(**parameters)
+  File "C:\Program Files\Python38\lib\site-packages\netmiko\ssh_dispatcher.py", line 246, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "C:\Program Files\Python38\lib\site-packages\netmiko\base_connection.py", line 317, in __init__
+    self._open()
+  File "C:\Program Files\Python38\lib\site-packages\netmiko\base_connection.py", line 322, in _open
+    self.establish_connection()
+  File "C:\Program Files\Python38\lib\site-packages\netmiko\base_connection.py", line 884, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "C:\Program Files\Python38\lib\site-packages\paramiko\client.py", line 435, in connect
+    self._auth(
+  File "C:\Program Files\Python38\lib\site-packages\paramiko\client.py", line 765, in _auth
+    raise SSHException("No authentication methods available")
+paramiko.ssh_exception.SSHException: No authentication methods available
+
+2020-08-03 14:43:12,860 - nornir.core.task -    ERROR -      start() - Host 'ORC_ADMIN_BASESWITCH': task 'dev_info' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "inventory.py", line 15, in dev_info
+    r = task.run(netmiko_send_command, command_string="show version", use_genie=True)
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\task.py", line 147, in run
+    raise NornirSubTaskError(task=task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: <function netmiko_send_command at 0x000002159231E4C0> (failed)
+
+
+2020-08-03 14:43:12,861 - nornir.core.task -    ERROR -      start() - Host 'ORC_ADMIN_BASESWITCH_02': task 'netmiko_send_command' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "C:\Program Files\Python38\lib\site-packages\nornir\plugins\tasks\networking\netmiko_send_command.py", line 26, in netmiko_send_command
+    net_connect = task.host.get_connection("netmiko", task.nornir.config)
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\inventory.py", line 294, in get_connection
+    self.open_connection(
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\inventory.py", line 345, in open_connection
+    self.connections[connection].open(
+  File "C:\Program Files\Python38\lib\site-packages\nornir\plugins\connections\netmiko.py", line 58, in open
+    self.connection = ConnectHandler(**parameters)
+  File "C:\Program Files\Python38\lib\site-packages\netmiko\ssh_dispatcher.py", line 246, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "C:\Program Files\Python38\lib\site-packages\netmiko\base_connection.py", line 317, in __init__
+    self._open()
+  File "C:\Program Files\Python38\lib\site-packages\netmiko\base_connection.py", line 322, in _open
+    self.establish_connection()
+  File "C:\Program Files\Python38\lib\site-packages\netmiko\base_connection.py", line 884, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "C:\Program Files\Python38\lib\site-packages\paramiko\client.py", line 435, in connect
+    self._auth(
+  File "C:\Program Files\Python38\lib\site-packages\paramiko\client.py", line 765, in _auth
+    raise SSHException("No authentication methods available")
+paramiko.ssh_exception.SSHException: No authentication methods available
+
+2020-08-03 14:43:12,861 - nornir.core.task -    ERROR -      start() - Host 'ORC_ADMIN_BBH_01': task 'dev_info' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "inventory.py", line 15, in dev_info
+    r = task.run(netmiko_send_command, command_string="show version", use_genie=True)
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\task.py", line 147, in run
+    raise NornirSubTaskError(task=task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: <function netmiko_send_command at 0x000002159231E4C0> (failed)
+
+
+2020-08-03 14:43:12,861 - nornir.core.task -    ERROR -      start() - Host 'ORC_ADMIN_BASESWITCH_02': task 'dev_info' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "inventory.py", line 15, in dev_info
+    r = task.run(netmiko_send_command, command_string="show version", use_genie=True)
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\task.py", line 147, in run
+    raise NornirSubTaskError(task=task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: <function netmiko_send_command at 0x000002159231E4C0> (failed)
+
+
+2020-08-03 14:43:12,892 - nornir.core.task -    ERROR -      start() - Host 'ORC_Admin_Wine_Room': task 'netmiko_send_command' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "C:\Program Files\Python38\lib\site-packages\nornir\plugins\tasks\networking\netmiko_send_command.py", line 26, in netmiko_send_command
+    net_connect = task.host.get_connection("netmiko", task.nornir.config)
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\inventory.py", line 294, in get_connection
+    self.open_connection(
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\inventory.py", line 345, in open_connection
+    self.connections[connection].open(
+  File "C:\Program Files\Python38\lib\site-packages\nornir\plugins\connections\netmiko.py", line 58, in open
+    self.connection = ConnectHandler(**parameters)
+  File "C:\Program Files\Python38\lib\site-packages\netmiko\ssh_dispatcher.py", line 246, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "C:\Program Files\Python38\lib\site-packages\netmiko\base_connection.py", line 317, in __init__
+    self._open()
+  File "C:\Program Files\Python38\lib\site-packages\netmiko\base_connection.py", line 322, in _open
+    self.establish_connection()
+  File "C:\Program Files\Python38\lib\site-packages\netmiko\base_connection.py", line 884, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "C:\Program Files\Python38\lib\site-packages\paramiko\client.py", line 435, in connect
+    self._auth(
+  File "C:\Program Files\Python38\lib\site-packages\paramiko\client.py", line 765, in _auth
+    raise SSHException("No authentication methods available")
+paramiko.ssh_exception.SSHException: No authentication methods available
+
+2020-08-03 14:43:12,893 - nornir.core.task -    ERROR -      start() - Host 'ORC_Admin_Wine_Room': task 'dev_info' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "inventory.py", line 15, in dev_info
+    r = task.run(netmiko_send_command, command_string="show version", use_genie=True)
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\task.py", line 147, in run
+    raise NornirSubTaskError(task=task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: <function netmiko_send_command at 0x000002159231E4C0> (failed)
+
+
+2020-08-03 14:43:13,011 - nornir.core.task -    ERROR -      start() - Host 'ORC_Admin_SR_02': task 'netmiko_send_command' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "C:\Program Files\Python38\lib\site-packages\nornir\plugins\tasks\networking\netmiko_send_command.py", line 26, in netmiko_send_command
+    net_connect = task.host.get_connection("netmiko", task.nornir.config)
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\inventory.py", line 294, in get_connection
+    self.open_connection(
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\inventory.py", line 345, in open_connection
+    self.connections[connection].open(
+  File "C:\Program Files\Python38\lib\site-packages\nornir\plugins\connections\netmiko.py", line 58, in open
+    self.connection = ConnectHandler(**parameters)
+  File "C:\Program Files\Python38\lib\site-packages\netmiko\ssh_dispatcher.py", line 246, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "C:\Program Files\Python38\lib\site-packages\netmiko\base_connection.py", line 317, in __init__
+    self._open()
+  File "C:\Program Files\Python38\lib\site-packages\netmiko\base_connection.py", line 322, in _open
+    self.establish_connection()
+  File "C:\Program Files\Python38\lib\site-packages\netmiko\base_connection.py", line 884, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "C:\Program Files\Python38\lib\site-packages\paramiko\client.py", line 435, in connect
+    self._auth(
+  File "C:\Program Files\Python38\lib\site-packages\paramiko\client.py", line 765, in _auth
+    raise SSHException("No authentication methods available")
+paramiko.ssh_exception.SSHException: No authentication methods available
+
+2020-08-03 14:43:13,011 - nornir.core.task -    ERROR -      start() - Host 'ORC_Admin_SR_01': task 'netmiko_send_command' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "C:\Program Files\Python38\lib\site-packages\nornir\plugins\tasks\networking\netmiko_send_command.py", line 26, in netmiko_send_command
+    net_connect = task.host.get_connection("netmiko", task.nornir.config)
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\inventory.py", line 294, in get_connection
+    self.open_connection(
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\inventory.py", line 345, in open_connection
+    self.connections[connection].open(
+  File "C:\Program Files\Python38\lib\site-packages\nornir\plugins\connections\netmiko.py", line 58, in open
+    self.connection = ConnectHandler(**parameters)
+  File "C:\Program Files\Python38\lib\site-packages\netmiko\ssh_dispatcher.py", line 246, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "C:\Program Files\Python38\lib\site-packages\netmiko\base_connection.py", line 317, in __init__
+    self._open()
+  File "C:\Program Files\Python38\lib\site-packages\netmiko\base_connection.py", line 322, in _open
+    self.establish_connection()
+  File "C:\Program Files\Python38\lib\site-packages\netmiko\base_connection.py", line 884, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "C:\Program Files\Python38\lib\site-packages\paramiko\client.py", line 435, in connect
+    self._auth(
+  File "C:\Program Files\Python38\lib\site-packages\paramiko\client.py", line 765, in _auth
+    raise SSHException("No authentication methods available")
+paramiko.ssh_exception.SSHException: No authentication methods available
+
+2020-08-03 14:43:13,011 - nornir.core.task -    ERROR -      start() - Host 'ORC_Admin_SR_05': task 'netmiko_send_command' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "C:\Program Files\Python38\lib\site-packages\nornir\plugins\tasks\networking\netmiko_send_command.py", line 26, in netmiko_send_command
+    net_connect = task.host.get_connection("netmiko", task.nornir.config)
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\inventory.py", line 294, in get_connection
+    self.open_connection(
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\inventory.py", line 345, in open_connection
+    self.connections[connection].open(
+  File "C:\Program Files\Python38\lib\site-packages\nornir\plugins\connections\netmiko.py", line 58, in open
+    self.connection = ConnectHandler(**parameters)
+  File "C:\Program Files\Python38\lib\site-packages\netmiko\ssh_dispatcher.py", line 246, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "C:\Program Files\Python38\lib\site-packages\netmiko\base_connection.py", line 317, in __init__
+    self._open()
+  File "C:\Program Files\Python38\lib\site-packages\netmiko\base_connection.py", line 322, in _open
+    self.establish_connection()
+  File "C:\Program Files\Python38\lib\site-packages\netmiko\base_connection.py", line 884, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "C:\Program Files\Python38\lib\site-packages\paramiko\client.py", line 435, in connect
+    self._auth(
+  File "C:\Program Files\Python38\lib\site-packages\paramiko\client.py", line 765, in _auth
+    raise SSHException("No authentication methods available")
+paramiko.ssh_exception.SSHException: No authentication methods available
+
+2020-08-03 14:43:13,012 - nornir.core.task -    ERROR -      start() - Host 'ORC_Admin_SR_01': task 'dev_info' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "inventory.py", line 15, in dev_info
+    r = task.run(netmiko_send_command, command_string="show version", use_genie=True)
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\task.py", line 147, in run
+    raise NornirSubTaskError(task=task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: <function netmiko_send_command at 0x000002159231E4C0> (failed)
+
+
+2020-08-03 14:43:13,012 - nornir.core.task -    ERROR -      start() - Host 'ORC_Admin_SR_02': task 'dev_info' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "inventory.py", line 15, in dev_info
+    r = task.run(netmiko_send_command, command_string="show version", use_genie=True)
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\task.py", line 147, in run
+    raise NornirSubTaskError(task=task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: <function netmiko_send_command at 0x000002159231E4C0> (failed)
+
+
+2020-08-03 14:43:13,012 - nornir.core.task -    ERROR -      start() - Host 'ORC_Admin_SR_05': task 'dev_info' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "inventory.py", line 15, in dev_info
+    r = task.run(netmiko_send_command, command_string="show version", use_genie=True)
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\task.py", line 147, in run
+    raise NornirSubTaskError(task=task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: <function netmiko_send_command at 0x000002159231E4C0> (failed)
+
+
+2020-08-03 14:43:13,220 - nornir.core.task -    ERROR -      start() - Host 'ORC_Admin_Finance_03': task 'netmiko_send_command' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "C:\Program Files\Python38\lib\site-packages\nornir\plugins\tasks\networking\netmiko_send_command.py", line 26, in netmiko_send_command
+    net_connect = task.host.get_connection("netmiko", task.nornir.config)
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\inventory.py", line 294, in get_connection
+    self.open_connection(
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\inventory.py", line 345, in open_connection
+    self.connections[connection].open(
+  File "C:\Program Files\Python38\lib\site-packages\nornir\plugins\connections\netmiko.py", line 58, in open
+    self.connection = ConnectHandler(**parameters)
+  File "C:\Program Files\Python38\lib\site-packages\netmiko\ssh_dispatcher.py", line 246, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "C:\Program Files\Python38\lib\site-packages\netmiko\base_connection.py", line 317, in __init__
+    self._open()
+  File "C:\Program Files\Python38\lib\site-packages\netmiko\base_connection.py", line 322, in _open
+    self.establish_connection()
+  File "C:\Program Files\Python38\lib\site-packages\netmiko\base_connection.py", line 884, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "C:\Program Files\Python38\lib\site-packages\paramiko\client.py", line 435, in connect
+    self._auth(
+  File "C:\Program Files\Python38\lib\site-packages\paramiko\client.py", line 765, in _auth
+    raise SSHException("No authentication methods available")
+paramiko.ssh_exception.SSHException: No authentication methods available
+
+2020-08-03 14:43:13,221 - nornir.core.task -    ERROR -      start() - Host 'ORC_Admin_Finance_03': task 'dev_info' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "inventory.py", line 15, in dev_info
+    r = task.run(netmiko_send_command, command_string="show version", use_genie=True)
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\task.py", line 147, in run
+    raise NornirSubTaskError(task=task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: <function netmiko_send_command at 0x000002159231E4C0> (failed)
+
+
+2020-08-03 14:43:13,557 - nornir.core.task -    ERROR -      start() - Host 'ORC_Admin_Finance_01': task 'netmiko_send_command' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "C:\Program Files\Python38\lib\site-packages\nornir\plugins\tasks\networking\netmiko_send_command.py", line 26, in netmiko_send_command
+    net_connect = task.host.get_connection("netmiko", task.nornir.config)
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\inventory.py", line 294, in get_connection
+    self.open_connection(
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\inventory.py", line 345, in open_connection
+    self.connections[connection].open(
+  File "C:\Program Files\Python38\lib\site-packages\nornir\plugins\connections\netmiko.py", line 58, in open
+    self.connection = ConnectHandler(**parameters)
+  File "C:\Program Files\Python38\lib\site-packages\netmiko\ssh_dispatcher.py", line 246, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "C:\Program Files\Python38\lib\site-packages\netmiko\base_connection.py", line 317, in __init__
+    self._open()
+  File "C:\Program Files\Python38\lib\site-packages\netmiko\base_connection.py", line 322, in _open
+    self.establish_connection()
+  File "C:\Program Files\Python38\lib\site-packages\netmiko\base_connection.py", line 884, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "C:\Program Files\Python38\lib\site-packages\paramiko\client.py", line 435, in connect
+    self._auth(
+  File "C:\Program Files\Python38\lib\site-packages\paramiko\client.py", line 765, in _auth
+    raise SSHException("No authentication methods available")
+paramiko.ssh_exception.SSHException: No authentication methods available
+
+2020-08-03 14:43:13,558 - nornir.core.task -    ERROR -      start() - Host 'ORC_Admin_Finance_02': task 'netmiko_send_command' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "C:\Program Files\Python38\lib\site-packages\nornir\plugins\tasks\networking\netmiko_send_command.py", line 26, in netmiko_send_command
+    net_connect = task.host.get_connection("netmiko", task.nornir.config)
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\inventory.py", line 294, in get_connection
+    self.open_connection(
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\inventory.py", line 345, in open_connection
+    self.connections[connection].open(
+  File "C:\Program Files\Python38\lib\site-packages\nornir\plugins\connections\netmiko.py", line 58, in open
+    self.connection = ConnectHandler(**parameters)
+  File "C:\Program Files\Python38\lib\site-packages\netmiko\ssh_dispatcher.py", line 246, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "C:\Program Files\Python38\lib\site-packages\netmiko\base_connection.py", line 317, in __init__
+    self._open()
+  File "C:\Program Files\Python38\lib\site-packages\netmiko\base_connection.py", line 322, in _open
+    self.establish_connection()
+  File "C:\Program Files\Python38\lib\site-packages\netmiko\base_connection.py", line 884, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "C:\Program Files\Python38\lib\site-packages\paramiko\client.py", line 435, in connect
+    self._auth(
+  File "C:\Program Files\Python38\lib\site-packages\paramiko\client.py", line 765, in _auth
+    raise SSHException("No authentication methods available")
+paramiko.ssh_exception.SSHException: No authentication methods available
+
+2020-08-03 14:43:13,559 - nornir.core.task -    ERROR -      start() - Host 'ORC_Admin_Finance_01': task 'dev_info' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "inventory.py", line 15, in dev_info
+    r = task.run(netmiko_send_command, command_string="show version", use_genie=True)
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\task.py", line 147, in run
+    raise NornirSubTaskError(task=task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: <function netmiko_send_command at 0x000002159231E4C0> (failed)
+
+
+2020-08-03 14:43:13,559 - nornir.core.task -    ERROR -      start() - Host 'ORC_Admin_SR_03': task 'netmiko_send_command' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "C:\Program Files\Python38\lib\site-packages\nornir\plugins\tasks\networking\netmiko_send_command.py", line 26, in netmiko_send_command
+    net_connect = task.host.get_connection("netmiko", task.nornir.config)
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\inventory.py", line 294, in get_connection
+    self.open_connection(
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\inventory.py", line 345, in open_connection
+    self.connections[connection].open(
+  File "C:\Program Files\Python38\lib\site-packages\nornir\plugins\connections\netmiko.py", line 58, in open
+    self.connection = ConnectHandler(**parameters)
+  File "C:\Program Files\Python38\lib\site-packages\netmiko\ssh_dispatcher.py", line 246, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "C:\Program Files\Python38\lib\site-packages\netmiko\base_connection.py", line 317, in __init__
+    self._open()
+  File "C:\Program Files\Python38\lib\site-packages\netmiko\base_connection.py", line 322, in _open
+    self.establish_connection()
+  File "C:\Program Files\Python38\lib\site-packages\netmiko\base_connection.py", line 884, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "C:\Program Files\Python38\lib\site-packages\paramiko\client.py", line 435, in connect
+    self._auth(
+  File "C:\Program Files\Python38\lib\site-packages\paramiko\client.py", line 765, in _auth
+    raise SSHException("No authentication methods available")
+paramiko.ssh_exception.SSHException: No authentication methods available
+
+2020-08-03 14:43:13,560 - nornir.core.task -    ERROR -      start() - Host 'ORC_Admin_Finance_02': task 'dev_info' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "inventory.py", line 15, in dev_info
+    r = task.run(netmiko_send_command, command_string="show version", use_genie=True)
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\task.py", line 147, in run
+    raise NornirSubTaskError(task=task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: <function netmiko_send_command at 0x000002159231E4C0> (failed)
+
+
+2020-08-03 14:43:13,560 - nornir.core.task -    ERROR -      start() - Host 'ORC_Admin_SR_03': task 'dev_info' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "inventory.py", line 15, in dev_info
+    r = task.run(netmiko_send_command, command_string="show version", use_genie=True)
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\task.py", line 147, in run
+    raise NornirSubTaskError(task=task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: <function netmiko_send_command at 0x000002159231E4C0> (failed)
+
+
+2020-08-03 14:43:13,560 - nornir.core.task -    ERROR -      start() - Host 'ORC_Admin_IT_Office_01': task 'netmiko_send_command' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "C:\Program Files\Python38\lib\site-packages\nornir\plugins\tasks\networking\netmiko_send_command.py", line 26, in netmiko_send_command
+    net_connect = task.host.get_connection("netmiko", task.nornir.config)
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\inventory.py", line 294, in get_connection
+    self.open_connection(
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\inventory.py", line 345, in open_connection
+    self.connections[connection].open(
+  File "C:\Program Files\Python38\lib\site-packages\nornir\plugins\connections\netmiko.py", line 58, in open
+    self.connection = ConnectHandler(**parameters)
+  File "C:\Program Files\Python38\lib\site-packages\netmiko\ssh_dispatcher.py", line 246, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "C:\Program Files\Python38\lib\site-packages\netmiko\base_connection.py", line 317, in __init__
+    self._open()
+  File "C:\Program Files\Python38\lib\site-packages\netmiko\base_connection.py", line 322, in _open
+    self.establish_connection()
+  File "C:\Program Files\Python38\lib\site-packages\netmiko\base_connection.py", line 884, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "C:\Program Files\Python38\lib\site-packages\paramiko\client.py", line 435, in connect
+    self._auth(
+  File "C:\Program Files\Python38\lib\site-packages\paramiko\client.py", line 765, in _auth
+    raise SSHException("No authentication methods available")
+paramiko.ssh_exception.SSHException: No authentication methods available
+
+2020-08-03 14:43:13,561 - nornir.core.task -    ERROR -      start() - Host 'ORC_Admin_IT_Office_01': task 'dev_info' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "inventory.py", line 15, in dev_info
+    r = task.run(netmiko_send_command, command_string="show version", use_genie=True)
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\task.py", line 147, in run
+    raise NornirSubTaskError(task=task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: <function netmiko_send_command at 0x000002159231E4C0> (failed)
+
+
+2020-08-03 14:43:13,561 - nornir.core.task -    ERROR -      start() - Host 'ORC_Admin_Fairmont_Gold': task 'netmiko_send_command' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "C:\Program Files\Python38\lib\site-packages\nornir\plugins\tasks\networking\netmiko_send_command.py", line 26, in netmiko_send_command
+    net_connect = task.host.get_connection("netmiko", task.nornir.config)
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\inventory.py", line 294, in get_connection
+    self.open_connection(
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\inventory.py", line 345, in open_connection
+    self.connections[connection].open(
+  File "C:\Program Files\Python38\lib\site-packages\nornir\plugins\connections\netmiko.py", line 58, in open
+    self.connection = ConnectHandler(**parameters)
+  File "C:\Program Files\Python38\lib\site-packages\netmiko\ssh_dispatcher.py", line 246, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "C:\Program Files\Python38\lib\site-packages\netmiko\base_connection.py", line 317, in __init__
+    self._open()
+  File "C:\Program Files\Python38\lib\site-packages\netmiko\base_connection.py", line 322, in _open
+    self.establish_connection()
+  File "C:\Program Files\Python38\lib\site-packages\netmiko\base_connection.py", line 884, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "C:\Program Files\Python38\lib\site-packages\paramiko\client.py", line 435, in connect
+    self._auth(
+  File "C:\Program Files\Python38\lib\site-packages\paramiko\client.py", line 765, in _auth
+    raise SSHException("No authentication methods available")
+paramiko.ssh_exception.SSHException: No authentication methods available
+
+2020-08-03 14:43:13,561 - nornir.core.task -    ERROR -      start() - Host 'ORC_Admin_Fairmont_Gold': task 'dev_info' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "inventory.py", line 15, in dev_info
+    r = task.run(netmiko_send_command, command_string="show version", use_genie=True)
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\task.py", line 147, in run
+    raise NornirSubTaskError(task=task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: <function netmiko_send_command at 0x000002159231E4C0> (failed)
+
+
+2020-08-03 14:43:13,562 - nornir.core.task -    ERROR -      start() - Host 'ORC_Admin_SR_06': task 'netmiko_send_command' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "C:\Program Files\Python38\lib\site-packages\nornir\plugins\tasks\networking\netmiko_send_command.py", line 26, in netmiko_send_command
+    net_connect = task.host.get_connection("netmiko", task.nornir.config)
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\inventory.py", line 294, in get_connection
+    self.open_connection(
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\inventory.py", line 345, in open_connection
+    self.connections[connection].open(
+  File "C:\Program Files\Python38\lib\site-packages\nornir\plugins\connections\netmiko.py", line 58, in open
+    self.connection = ConnectHandler(**parameters)
+  File "C:\Program Files\Python38\lib\site-packages\netmiko\ssh_dispatcher.py", line 246, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "C:\Program Files\Python38\lib\site-packages\netmiko\base_connection.py", line 317, in __init__
+    self._open()
+  File "C:\Program Files\Python38\lib\site-packages\netmiko\base_connection.py", line 322, in _open
+    self.establish_connection()
+  File "C:\Program Files\Python38\lib\site-packages\netmiko\base_connection.py", line 884, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "C:\Program Files\Python38\lib\site-packages\paramiko\client.py", line 435, in connect
+    self._auth(
+  File "C:\Program Files\Python38\lib\site-packages\paramiko\client.py", line 765, in _auth
+    raise SSHException("No authentication methods available")
+paramiko.ssh_exception.SSHException: No authentication methods available
+
+2020-08-03 14:43:13,562 - nornir.core.task -    ERROR -      start() - Host 'ORC_Admin_SR_06': task 'dev_info' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "inventory.py", line 15, in dev_info
+    r = task.run(netmiko_send_command, command_string="show version", use_genie=True)
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\task.py", line 147, in run
+    raise NornirSubTaskError(task=task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: <function netmiko_send_command at 0x000002159231E4C0> (failed)
+
+
+2020-08-03 14:43:13,897 - nornir.core.task -    ERROR -      start() - Host 'ORC_ADMIN_RSHACK_01': task 'netmiko_send_command' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "C:\Program Files\Python38\lib\site-packages\nornir\plugins\tasks\networking\netmiko_send_command.py", line 26, in netmiko_send_command
+    net_connect = task.host.get_connection("netmiko", task.nornir.config)
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\inventory.py", line 294, in get_connection
+    self.open_connection(
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\inventory.py", line 345, in open_connection
+    self.connections[connection].open(
+  File "C:\Program Files\Python38\lib\site-packages\nornir\plugins\connections\netmiko.py", line 58, in open
+    self.connection = ConnectHandler(**parameters)
+  File "C:\Program Files\Python38\lib\site-packages\netmiko\ssh_dispatcher.py", line 246, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "C:\Program Files\Python38\lib\site-packages\netmiko\base_connection.py", line 317, in __init__
+    self._open()
+  File "C:\Program Files\Python38\lib\site-packages\netmiko\base_connection.py", line 322, in _open
+    self.establish_connection()
+  File "C:\Program Files\Python38\lib\site-packages\netmiko\base_connection.py", line 884, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "C:\Program Files\Python38\lib\site-packages\paramiko\client.py", line 435, in connect
+    self._auth(
+  File "C:\Program Files\Python38\lib\site-packages\paramiko\client.py", line 765, in _auth
+    raise SSHException("No authentication methods available")
+paramiko.ssh_exception.SSHException: No authentication methods available
+
+2020-08-03 14:43:13,897 - nornir.core.task -    ERROR -      start() - Host 'ORC_ADMIN_RSHACK_01': task 'dev_info' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "inventory.py", line 15, in dev_info
+    r = task.run(netmiko_send_command, command_string="show version", use_genie=True)
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\task.py", line 147, in run
+    raise NornirSubTaskError(task=task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: <function netmiko_send_command at 0x000002159231E4C0> (failed)
+
+
+2020-08-03 14:43:38,342 -  nornir.core -     INFO -        run() - Running task 'dev_info' with args {} on 1 hosts
+2020-08-03 14:43:38,980 - nornir.core.task -    ERROR -      start() - Host 'ORC_ADMIN_BASESWITCH': task 'netmiko_send_command' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "C:\Program Files\Python38\lib\site-packages\nornir\plugins\tasks\networking\netmiko_send_command.py", line 26, in netmiko_send_command
+    net_connect = task.host.get_connection("netmiko", task.nornir.config)
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\inventory.py", line 294, in get_connection
+    self.open_connection(
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\inventory.py", line 345, in open_connection
+    self.connections[connection].open(
+  File "C:\Program Files\Python38\lib\site-packages\nornir\plugins\connections\netmiko.py", line 58, in open
+    self.connection = ConnectHandler(**parameters)
+  File "C:\Program Files\Python38\lib\site-packages\netmiko\ssh_dispatcher.py", line 246, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "C:\Program Files\Python38\lib\site-packages\netmiko\base_connection.py", line 317, in __init__
+    self._open()
+  File "C:\Program Files\Python38\lib\site-packages\netmiko\base_connection.py", line 322, in _open
+    self.establish_connection()
+  File "C:\Program Files\Python38\lib\site-packages\netmiko\base_connection.py", line 884, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "C:\Program Files\Python38\lib\site-packages\paramiko\client.py", line 435, in connect
+    self._auth(
+  File "C:\Program Files\Python38\lib\site-packages\paramiko\client.py", line 765, in _auth
+    raise SSHException("No authentication methods available")
+paramiko.ssh_exception.SSHException: No authentication methods available
+
+2020-08-03 14:43:38,980 - nornir.core.task -    ERROR -      start() - Host 'ORC_ADMIN_BASESWITCH': task 'dev_info' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "inventory.py", line 15, in dev_info
+    r = task.run(netmiko_send_command, command_string="show version", use_genie=True)
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\task.py", line 147, in run
+    raise NornirSubTaskError(task=task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: <function netmiko_send_command at 0x000001CA0152E4C0> (failed)
+
+
