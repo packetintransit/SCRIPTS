@@ -1,0 +1,210 @@
+---
+
+ORC_ADMIN_BASESWITCH:
+    hostname: 10.202.228.15
+    platform: 'ios'
+    username: aabdurahmanov
+    password: David2015!
+    groups:
+        - cisco_group
+    data:
+        vendor: Cisco
+        domain: myfairmont.com
+        country: usa
+        hotel_code: orc
+
+ORC_ADMIN_BASESWITCH_02:
+    hostname: 10.202.228.16
+    platform: 'ios'
+    username: aabdurahmanov
+    password: David2015!
+    groups:
+        - cisco_group
+    data:
+        vendor: Cisco
+        domain: myfairmont.com
+        country: usa
+        hotel_code: orc
+
+ORC_ADMIN_BBH_01:
+    hostname: 10.202.228.25
+    platform: 'ios'
+    username: aabdurahmanov
+    password: David2015!
+    groups:
+        - cisco_group
+    data:
+        vendor: Cisco
+        domain: myfairmont.com
+        country: usa
+        hotel_code: orc
+
+ORC_Admin_Fairmont_Gold:
+    hostname: 10.202.228.30
+    platform: 'ios'
+    username: aabdurahmanov
+    password: David2015!
+    groups:
+        - cisco_group
+    data:
+        vendor: Cisco
+        domain: myfairmont.com
+        country: usa
+        hotel_code: orc
+
+ORC_Admin_Finance_01:
+    hostname: 10.202.228.19
+    platform: 'ios'
+    username: aabdurahmanov	
+    password: David2015!
+    groups:
+        - cisco_group
+    data:
+        vendor: Cisco
+        domain: myfairmont.com
+        country: usa
+        hotel_code: orc
+
+ORC_Admin_Finance_02:
+    hostname: 10.202.228.22
+    platform: 'ios'
+    username: aabdurahmanov
+    password: David2015!
+    groups:
+        - cisco_group
+    data:
+        vendor: Cisco
+        domain: myfairmont.com
+        country: usa
+        hotel_code: orc
+
+ORC_Admin_Finance_03:
+    hostname: 10.202.228.27
+    platform: 'ios'
+    username: aabdurahmanov
+    password: David2015!
+    groups:
+        - cisco_group
+    data:
+        vendor: Cisco
+        domain: myfairmont.com
+        country: usa
+        hotel_code: orc
+
+ORC_Admin_IT_Office_01:
+    hostname: 10.202.228.33
+    platform: 'ios'
+    username: aabdurahmanov
+    password: David2015!
+    groups:
+        - cisco_group
+    data:
+        vendor: Cisco
+        domain: myfairmont.com
+        country: usa
+        hotel_code: orc
+
+ORC_ADMIN_RSHACK_01:
+    hostname: 10.202.228.40
+    platform: 'ios'
+    username: aabdurahmanov
+    password: David2015!
+    groups:
+        - cisco_group
+    data:
+        vendor: Cisco
+        domain: myfairmont.com
+        country: usa
+        hotel_code: orc
+
+ORC_Admin_SR_01:
+    hostname: 10.202.228.34
+    platform: 'ios'
+    username: aabdurahmanov
+    password: David2015!
+    groups:
+        - cisco_group
+    data:
+        vendor: Cisco
+        domain: myfairmont.com
+        country: usa
+        hotel_code: orc
+
+ORC_Admin_SR_02:
+    hostname: 10.202.228.24
+    platform: 'ios'
+    username: aabdurahmanov
+    password: David2015!
+    groups:
+        - cisco_group
+    data:
+        vendor: Cisco
+        domain: myfairmont.com
+        country: usa
+        hotel_code: orc
+
+ORC_Admin_SR_03:
+    hostname: 10.202.228.29
+    platform: 'ios'
+    username: aabdurahmanov	
+    password: David2015!
+    groups:
+        - cisco_group
+    data:
+        vendor: Cisco
+        domain: myfairmont.com
+        country: usa
+        hotel_code: orc
+
+ORC_Admin_SR_04:
+    hostname: 10.202.228.35
+    platform: 'ios'
+    username: aabdurahmanov
+    password: David2015!
+    groups:
+        - cisco_group
+    data:
+        vendor: Cisco
+        domain: myfairmont.com
+        country: usa
+        hotel_code: orc
+
+ORC_Admin_SR_05:
+    hostname: 10.202.228.21
+    platform: 'ios'
+    username: aabdurahmanov
+    password: David2015!
+    groups:
+        - cisco_group
+    data:
+        vendor: Cisco
+        domain: myfairmont.com
+        country: usa
+        hotel_code: orc
+
+ORC_Admin_SR_06:
+    hostname: 10.202.228.36
+    platform: 'ios'
+    username: aabdurahmanov
+    password: David2015!
+    groups:
+        - cisco_group
+    data:
+        vendor: Cisco
+        domain: myfairmont.com
+        country: usa
+        hotel_code: orc
+
+ORC_Admin_Wine_Room:
+    hostname: 10.202.228.28
+    platform: 'ios'
+    username: aabdurahmanov
+    password: David2015!
+    groups:
+        - cisco_group
+    data:
+        vendor: Cisco
+        domain: myfairmont.com
+        country: usa
+        hotel_code: orc
+
