@@ -1,0 +1,13 @@
+---
+
+ORC_Admin_IT_Office_01:
+    hostname: 10.202.228.33
+    platform: 'ios'
+    groups:
+        - cisco_group
+    data:
+        vendor: Cisco
+        domain: myfairmont.com
+        country: usa
+        hotel_code: orc
+

@@ -1,0 +1,100 @@
+ntp server 10.250.2.12
+no ip source-route
+
+snmp-server group Accor-Switch-SNMP v3 priv access SNMP_Server
+snmp-server group Accor-Switch-SNMP v3 auth context vlan- match prefix
+
+aaa new-model
+aaa group server radius NCA-Site-Radius
+ server name NCA-Site-Radius
+aaa authentication login NO_AUTHEN local
+aaa authentication login vty group NCA-Site-Radius local
+aaa authorization exec default group NCA-Site-Radius local
+aaa session-id common
+
+aaa group server radius NCA-Site-Radius
+ server name NCA-Site-Radius
+radius server NCA-Site-Radius
+ address ipv4 10.1.2.207 auth-port 1645 acct-port 1646
+ key 7 133716021F5C1639072129352F
+
+line vty 0 4
+ session-timeout 10
+ logging synchronous
+ login authentication vty
+ transport input ssh
+ transport output ssh
+line vty 5 15
+ session-timeout 10
+ logging synchronous
+ login authentication vty
+ transport input ssh
+ transport output ssh
+
+no service finger
+no service dhcp
+no service tcp-small-servers
+no service udp-small-servers
+
+no service config
+no service pad
+no ip name-server
+no ip http server
+
+spanning-tree mode rapid-pvst
+spanning-tree portfast default
+
+clock timezone HST -10
+
+logging buffered 16384
+service timestamps debug datetime msec localtime show-timezone
+service timestamps log datetime msec localtime show-timezone
+
+
+ip domain-name myfairmont.com
+
+banner exec ^CCCC
+
+       ***********************************************************
+
+                                ATTENTION
+                                =========
+                "UNAUTHORIZED   ACCESS IS   PROHIBITED"
+
+        This system is solely for the use of authorized users for
+	official purposes.
+
+	You have no expectation of privacy in its use and to ensure
+               	that the system is functioning properly.
+
+	Individuals using this system are subject to having
+	all of their activities monitored and recorded by system
+	personnel.
+
+	Use of this system evidences an express consent to such
+	monitoring and agreement, that if such monitoring reveals
+	evidence of possible abuse or criminal activity.
+
+	System personnel may provide the results of such monitoring
+	to appropriate officials.
+
+
+        ***********************************************************
+^C
+banner login ^CCC
+
+        ***********************************************************
+
+                                ATTENTION
+                                =========
+                "UNAUTHORIZED   ACCESS  IS   PROHIBITED
+                                  AND
+                          PUNISHABLE BY LAW"
+
+        ***********************************************************
+^C
+
+ip ssh ver 2
+ip ssh authentication-retries 3
+
+ip http secure-ciphersuite aes-256-cbc-sha dhe-aes-256-cbc-sha

@@ -1,0 +1,36 @@
+2020-08-03 12:29:19,859 -  nornir.core -     INFO -        run() - Running task 'runner' with args {} on 1 hosts
+2020-08-03 12:29:19,863 - nornir.core.task -    ERROR -      start() - Host 'ORC_Admin_IT_Office_01': task 'send_command' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "C:\Users\aabdurahmanov\AppData\Roaming\Python\Python38\site-packages\nornir_scrapli\tasks\send_command.py", line 22, in send_command
+    scrapli_conn = task.host.get_connection("scrapli", task.nornir.config)
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\inventory.py", line 294, in get_connection
+    self.open_connection(
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\inventory.py", line 345, in open_connection
+    self.connections[connection].open(
+  File "C:\Users\aabdurahmanov\AppData\Roaming\Python\Python38\site-packages\nornir_scrapli\connection.py", line 100, in open
+    connection = scrapli_driver(**parameters)
+  File "C:\Users\aabdurahmanov\AppData\Roaming\Python\Python38\site-packages\scrapli\driver\core\cisco_iosxe\driver.py", line 107, in __init__
+    super().__init__(
+  File "C:\Users\aabdurahmanov\AppData\Roaming\Python\Python38\site-packages\scrapli\driver\network_driver.py", line 61, in __init__
+    super().__init__(comms_prompt_pattern=self.comms_prompt_pattern, **kwargs)
+  File "C:\Users\aabdurahmanov\AppData\Roaming\Python\Python38\site-packages\scrapli\driver\generic_driver.py", line 48, in __init__
+    super().__init__(comms_prompt_pattern=comms_prompt_pattern, comms_ansi=comms_ansi, **kwargs)
+  File "C:\Users\aabdurahmanov\AppData\Roaming\Python\Python38\site-packages\scrapli\driver\driver.py", line 33, in __init__
+    super().__init__(**kwargs)
+  File "C:\Users\aabdurahmanov\AppData\Roaming\Python\Python38\site-packages\scrapli\driver\base_driver.py", line 194, in __init__
+    raise UnsupportedPlatform(msg)
+scrapli.exceptions.UnsupportedPlatform: `system` transport is not supported on Windows, please use a different transport
+
+2020-08-03 12:29:19,863 - nornir.core.task -    ERROR -      start() - Host 'ORC_Admin_IT_Office_01': task 'runner' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File ".\h_check.py", line 27, in runner
+    output = task.run(task=send_command, command= "show run")
+  File "C:\Program Files\Python38\lib\site-packages\nornir\core\task.py", line 147, in run
+    raise NornirSubTaskError(task=task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: <function send_command at 0x000002C93C157940> (failed)
+
+
